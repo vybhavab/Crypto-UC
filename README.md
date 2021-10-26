@@ -5,7 +5,7 @@ This project was bootstrapped with
 
 ### Run Using Docker
 `docker build --tag crypto_uc .`
-`docker run crypto_uc`
+`docker run -itd -p 3000:3000 crypto_uc`
 
 ### Run Locally Without Docker
 In the project directory, you can run:
