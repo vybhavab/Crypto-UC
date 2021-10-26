@@ -3,8 +3,6 @@ FROM alpine:3.14.2
 COPY package.json .
 COPY yarn.lock .
 COPY tsconfig.json .
-COPY prettierrc.json .
-COPY .eslintrc.json .
 
 COPY public/ ./public/
 COPY src/ ./src/
