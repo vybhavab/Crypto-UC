@@ -10,6 +10,7 @@ import {
   } from "@chakra-ui/react";
 
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
+import GoogleButton from 'react-google-button'
 import styles from "./Login.module.scss";
 
 class Login extends React.Component {
@@ -23,6 +24,7 @@ class Login extends React.Component {
                     <Heading as="h1">
                         Login
                     </Heading>
+                    <GoogleButton />
                     <Text>
                         Coming soon...
                     </Text>
