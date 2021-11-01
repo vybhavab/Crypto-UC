@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, {useState} from "react";
 import {
     Box,
     Heading,
@@ -10,24 +10,26 @@ import {
   } from "@chakra-ui/react";
 
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
-import GoogleButton from 'react-google-button'
-import styles from "./Login.module.scss";
+import LoginBox from "components/LoginBox/LoginBox";
+import Logout from "components/Logout/logout";
 
-class Login extends React.Component {
-  render() {
+const Login = () => {
+    const [isLoggedIn, setLoggedIn] = useState(false);
     return (
         <div>
             <Box textAlign="center" fontSize="xl">
                 <Grid minH="100vh" p={3}>
                     <ColorModeSwitcher justifySelf="flex-end" />
                     <VStack spacing={8}>
-                    <Heading as="h1">
-                        Login
+                    <Heading>
+                      {isLoggedIn ? 'LoggedIn' : 'Nah fam'}
                     </Heading>
-                    <GoogleButton />
                     <Text>
                         Coming soon...
                     </Text>
+                    {!isLoggedIn ?
+                      <LoginBox setIsLoggedIn={setLoggedIn} />:<Logout setIsLoggedIn={setLoggedIn}/>
+                    }
                     <Stack direction="row" spacing={4} align="center">
                             <Button colorScheme="teal" variant="solid">
                                 <a href="/">Home Page</a>
@@ -44,7 +46,7 @@ class Login extends React.Component {
             </Box>
         </div>
     );
-  }
+
 }
 
 export default Login;
