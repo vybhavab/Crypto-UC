@@ -2,15 +2,11 @@ import * as React from "react";
 import {
     Box,
     Heading,
-    Text,
     VStack,
     Grid,
-    Button,
-    Stack
   } from "@chakra-ui/react";
 
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
-import styles from "./PageNotFound.module.scss";
 
 class PageNotFound extends React.Component {
   render() {

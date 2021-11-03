@@ -1,16 +1,12 @@
 import React, {useState} from "react";
 import {
-    Box,
     Flex,
     Stack,
     Heading,
     Text,
     useColorModeValue,
-    VStack,
-    Grid
   } from "@chakra-ui/react";
 
-import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
 import LoginGoogle from "components/LoginGoogle/LoginGoogle";
 import Logout from "components/Logout/logout";
 
@@ -27,17 +23,17 @@ const Login = () => {
 
                     <Heading fontSize={'4xl'}>Sign in using UC Account</Heading>
                     <Text fontSize={'lg'} color={'gray.500'}>
-                      to enjoy all of our cool features ✌️
+                      to enjoy all of our cool features <span role="img" aria-label="peace sign">✌️</span>
                     </Text>
-                    
+
                     <Text  color={useColorModeValue('#00B2E3', '#00B2E3')}>
                         {isLoggedIn ? 'LoggedIn' : 'Logged Out'}
                     </Text>
-            
+
                     {!isLoggedIn ?
                         <LoginGoogle setIsLoggedIn={setLoggedIn} />:<Logout setIsLoggedIn={setLoggedIn}/>
                     }
-                  
+
                 </Stack>
               </Flex>
         </div>

@@ -2,11 +2,8 @@ import * as React from "react";
 import {
     Box,
     Heading,
-    Text,
     VStack,
     Grid,
-    Stack,
-    Button,
     Table,
     Thead,
     Tbody,
@@ -18,10 +15,8 @@ import {
   } from "@chakra-ui/react";
 
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
-import ImageCard from "../../components/Card/ImageCard";
 import CardBody from "../../components/Card/CardBody";
 import NavModal from "../../components/NavModal/NavModal";
-import styles from "./Dashboard.module.scss";
 
 class Dashboard extends React.Component {
   render() {

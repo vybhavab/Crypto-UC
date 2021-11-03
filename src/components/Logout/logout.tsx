@@ -1,6 +1,6 @@
 import { Button, Center, Text } from '@chakra-ui/react';
 import React from 'react';
-import { GoogleLoginResponse, useGoogleLogin, useGoogleLogout } from 'react-google-login';
+import { useGoogleLogout } from 'react-google-login';
 
 interface Props {
   setIsLoggedIn: (isLoggedIn: boolean) => void;

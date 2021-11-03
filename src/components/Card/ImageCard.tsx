@@ -11,11 +11,9 @@ import {
     Stack,
     Button,
     useColorModeValue,
-    StackDivider,
     Divider
-
   } from "@chakra-ui/react"
-  
+
   export default function SocialProfileWithImage() {
     return (
       <Center py={6}>
@@ -46,7 +44,7 @@ import {
               }}
             />
           </Flex>
-  
+
           <Box p={6}>
             <Stack spacing={0} align={'center'} mb={5}>
               <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
@@ -54,7 +52,7 @@ import {
               </Heading>
               <Text color={'gray.500'}>Graduate Student</Text>
             </Stack>
-  
+
             <Stack direction={'row'} justify={'center'} spacing={6}>
               <Stack spacing={0} align={'center'}>
                 <Text fontWeight={600}>40.762</Text>
@@ -69,7 +67,7 @@ import {
                 </Text>
               </Stack>
             </Stack>
-  
+
             <Button
               w={'full'}
               mt={8}
@@ -83,7 +81,7 @@ import {
               Manage your profile
             </Button>
             <Divider paddingTop="3"/>
-            
+
             <VStack
               divider={<Divider />}
               align="left"
@@ -104,7 +102,7 @@ import {
                 Logout
               </Box>
             </VStack>
-            
+
           </Box>
         </Box>
       </Center>

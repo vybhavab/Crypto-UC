@@ -7,9 +7,6 @@ import {
   Text,
   Button,
   Stack,
-  Icon,
-  useColorModeValue,
-  createIcon,
 } from '@chakra-ui/react';
 
 export default function CallToActionWithAnnotation() {
@@ -34,7 +31,7 @@ export default function CallToActionWithAnnotation() {
             lineHeight={'110%'}>
             Your Transactions <br />
             <Text as={'span'} color={'#00B2E3'}>
-              Secured By Blockchain Technology 
+              Secured By Blockchain Technology
             </Text>
           </Heading>
           <Text color={'gray.500'}>

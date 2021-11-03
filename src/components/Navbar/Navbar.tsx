@@ -5,7 +5,6 @@ import {
     Flex,
     Text,
     IconButton,
-    Button,
     Stack,
     Collapse,
     Icon,
@@ -24,9 +23,9 @@ import {
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-  
+
   import NavModal from "components/NavModal/NavModal";
-  
+
   const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure();
 
