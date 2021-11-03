@@ -17,15 +17,17 @@ import {
     useBreakpointValue,
     useDisclosure,
   } from '@chakra-ui/react';
+
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
-
-
-  export default function WithSubnavigation() {
+  
+  import NavModal from "components/NavModal/NavModal";
+  
+  const Navbar = () => {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
@@ -72,18 +74,7 @@ import {
             justify={'flex-end'}
             direction={'row'}
             spacing={6}>
-            <Button
-              display={{ base: 'none', md: 'inline-flex' }}
-              fontSize={'sm'}
-              fontWeight={600}
-              color={'white'}
-              bg={'#00B2E3'}
-              href={'#'}
-              _hover={{
-                bg: '#03F9E6',
-              }}>
-              <a href="/login">Log In</a>
-            </Button>
+            <NavModal/>
           </Stack>
         </Flex>
 
@@ -289,3 +280,5 @@ import {
       href: '#',
     },
   ];
+
+  export default Navbar;

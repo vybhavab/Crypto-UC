@@ -11,7 +11,7 @@ interface Props {
 
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 
-const LoginBox = (props: Props) => {
+const LoginGoogle = (props: Props) => {
 
   const onLoginSuccess = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
     props.setIsLoggedIn(true);
@@ -51,4 +51,4 @@ const LoginBox = (props: Props) => {
   );
 }
 
-export default LoginBox;
+export default LoginGoogle;

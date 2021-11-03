@@ -48,7 +48,7 @@ export default function CallToActionWithAnnotation() {
             position={'relative'}>
             <Button
               colorScheme={'green'}
-              bg={'white'}
+              bg={'#00B2E3'}
               rounded={'full'}
               px={6}
               _hover={{
