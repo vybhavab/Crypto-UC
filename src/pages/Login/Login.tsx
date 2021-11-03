@@ -1,37 +1,45 @@
 import React, {useState} from "react";
 import {
     Box,
+    Flex,
+    Stack,
     Heading,
     Text,
+    useColorModeValue,
     VStack,
-    Grid,
-    Stack,
-    Button
+    Grid
   } from "@chakra-ui/react";
 
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
-import LoginBox from "components/LoginBox/LoginBox";
+import LoginGoogle from "components/LoginGoogle/LoginGoogle";
 import Logout from "components/Logout/logout";
 
 const Login = () => {
     const [isLoggedIn, setLoggedIn] = useState(false);
     return (
         <div>
-            <Box textAlign="center" fontSize="xl">
-                <Grid minH="100vh" p={3}>
-                    <ColorModeSwitcher justifySelf="flex-end" />
-                    <VStack spacing={8}>
-                    <Heading>
-                      {isLoggedIn ? 'LoggedIn' : 'Logged Out'}
-                    </Heading>
-    
-                    {!isLoggedIn ?
-                      <LoginBox setIsLoggedIn={setLoggedIn} />:<Logout setIsLoggedIn={setLoggedIn}/>
-                    }
+          <Flex
+                minH={'100vh'}
+                align={'center'}
+                justify={'center'}
+                bg={useColorModeValue('.50', 'gray.800')}>
+                <Stack align={'center'} spacing={4} mx={'auto'} maxW={'lg'} py={12} px={6}>
 
-                    </VStack>
-                </Grid>
-            </Box>
+                    <Heading fontSize={'4xl'}>Sign in using UC Account</Heading>
+                    <Text fontSize={'lg'} color={'gray.500'}>
+                      to enjoy all of our cool features ✌️
+                    </Text>
+                    
+                    <Text  color={useColorModeValue('#00B2E3', '#00B2E3')}>
+                        {isLoggedIn ? 'LoggedIn' : 'Logged Out'}
+                    </Text>
+            
+                    {!isLoggedIn ?
+                        <LoginGoogle setIsLoggedIn={setLoggedIn} />:<Logout setIsLoggedIn={setLoggedIn}/>
+                    }
+                  
+                </Stack>
+              </Flex>
         </div>
     );
 

@@ -12,7 +12,7 @@ import {
 
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
 import Hero from '../../components/Hero/Hero';
-import styles from "./Home.module.scss";
+
 
 
 class Home extends React.Component {
@@ -20,11 +20,9 @@ class Home extends React.Component {
     return (
         <div>
             <Box textAlign="center" fontSize="xl">
-                <Grid minH="100vh" p={3}>
+                <Grid minH="50vh" p={2}>
                     <ColorModeSwitcher justifySelf="flex-end" />
-                    <VStack spacing={8}>
-                        <Hero/>
-                    </VStack>
+                      <Hero/>
                 </Grid>
             </Box>
         </div>
