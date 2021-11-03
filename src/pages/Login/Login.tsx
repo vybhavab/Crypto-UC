@@ -22,25 +22,13 @@ const Login = () => {
                     <ColorModeSwitcher justifySelf="flex-end" />
                     <VStack spacing={8}>
                     <Heading>
-                      {isLoggedIn ? 'LoggedIn' : 'Nah fam'}
+                      {isLoggedIn ? 'LoggedIn' : 'Logged Out'}
                     </Heading>
-                    <Text>
-                        Coming soon...
-                    </Text>
+    
                     {!isLoggedIn ?
                       <LoginBox setIsLoggedIn={setLoggedIn} />:<Logout setIsLoggedIn={setLoggedIn}/>
                     }
-                    <Stack direction="row" spacing={4} align="center">
-                            <Button colorScheme="teal" variant="solid">
-                                <a href="/">Home Page</a>
-                            </Button>
-                            <Button colorScheme="red" variant="solid">
-                                <a href="/dashboard">Dashboard</a>
-                            </Button>
-                            <Button colorScheme="green" variant="solid">
-                                <a href="/login">Login</a>
-                            </Button>
-                        </Stack>
+
                     </VStack>
                 </Grid>
             </Box>

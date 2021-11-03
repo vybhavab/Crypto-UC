@@ -4,6 +4,8 @@ import {
   ChakraProvider,
   theme,
 } from "@chakra-ui/react";
+import Navbar from './components/Navbar/Navbar'
+import Sidebar from './components/Sidebar/Sidebar';
 
 import Home from "./pages/Home/Home";
 import Dashboard from "./pages/Dashboard/Dashboard";
@@ -15,6 +17,8 @@ class App extends React.Component {
     return (
       <div>
         <ChakraProvider theme={theme}>
+          <Navbar/>
+          {/* <Sidebar/> */}
           <Router>
               <Switch>
                 <Route exact path="/" component={Home} />

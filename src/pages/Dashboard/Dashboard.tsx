@@ -17,23 +17,13 @@ class Dashboard extends React.Component {
     return (
         <div>
             <Box textAlign="center" fontSize="xl">
-                <Grid minH="100vh" p={3}>
+                <Grid minH="90vh" p={3}>
                     <ColorModeSwitcher justifySelf="flex-end" />
-                    <VStack spacing={8}>
+                    <VStack spacing={4}>
                         <Heading as="h1">
                             Dashboard
                         </Heading>
-                        <Stack direction="row" spacing={4} align="center">
-                            <Button colorScheme="teal" variant="solid">
-                                <a href="/">Home Page</a>
-                            </Button>
-                            <Button colorScheme="red" variant="solid">
-                                <a href="/dashboard">Dashboard</a>
-                            </Button>
-                            <Button colorScheme="green" variant="solid">
-                                <a href="/login">Login</a>
-                            </Button>
-                        </Stack>
+                        <Text>Coming Soon...</Text>
                     </VStack>
                 </Grid>
             </Box>

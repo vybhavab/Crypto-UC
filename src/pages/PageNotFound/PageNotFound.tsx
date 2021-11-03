@@ -23,11 +23,6 @@ class PageNotFound extends React.Component {
                         <Heading as="h1">
                             PageNotFound
                         </Heading>
-                        <Stack direction="row" spacing={4} align="center">
-                            <Button colorScheme="teal" variant="solid">
-                                <a href="/">Home Page</a>
-                            </Button>
-                        </Stack>
                     </VStack>
                 </Grid>
             </Box>
