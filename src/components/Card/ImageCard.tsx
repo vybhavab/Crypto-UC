@@ -26,13 +26,12 @@ import {
 
   export default function SocialProfileWithImage({finalRef, isOpen, onClose}: Props) {
     return (
-      <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+      <Modal isCentered finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
           <ModalOverlay />
           <ModalContent>
-            <ModalBody >
-            <Center py={6}>
+            <ModalBody p={0}>
+            <Center>
               <Box
-                // maxW={'270px'}
                 w={'full'}
                 bg={useColorModeValue('white', 'gray.800')}
                 boxShadow={'2xl'}
