@@ -1,10 +1,6 @@
 import React from "react";
 import {
     Button,
-    Modal,
-    ModalOverlay,
-    ModalContent,
-    ModalBody,
   } from "@chakra-ui/react"
 
   import { useDisclosure } from "@chakra-ui/react"
