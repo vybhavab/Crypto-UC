@@ -1,14 +1,19 @@
-import { ColorModeScript } from "@chakra-ui/react"
+import { ChakraProvider, ColorModeScript } from "@chakra-ui/react"
 import * as React from "react"
 import ReactDOM from "react-dom"
-import { App } from "./pages/App"
+import  App from "./App"
 import reportWebVitals from "./reportWebVitals"
 import * as serviceWorker from "./serviceWorker"
+import theme from './theme'
+
+require('dotenv').config()
 
 ReactDOM.render(
   <React.StrictMode>
-    <ColorModeScript />
-    <App />
+      <ColorModeScript initialColorMode={theme.config.initialColorMode} />
+      <ChakraProvider theme={theme}>
+        <App />
+      </ChakraProvider>
   </React.StrictMode>,
   document.getElementById("root"),
 )

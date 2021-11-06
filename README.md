@@ -3,9 +3,16 @@ This project was bootstrapped with
 
 ## Available Scripts
 
-In the project directory, you can run:
+### Run Using Docker
+`docker build --tag crypto_uc .`
+`docker run -itd -p 3000:3000 crypto_uc`
 
-### `yarn start`
+### Run Locally Without Docker
+In the project directory, you can run:
+If you do not have yarn, install using npm. Then install dependencies
+#### `npm install -g yarn`
+#### `yarn install`
+#### `yarn start`
 
 Runs the app in the development mode.<br /> Open
 [http://localhost:3000](http://localhost:3000) to view it in the browser.
