@@ -16,7 +16,6 @@ import {
 
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
 import CardBody from "../../components/Card/CardBody";
-import NavModal from "../../components/NavModal/NavModal";
 
 class Dashboard extends React.Component {
   render() {
@@ -30,7 +29,6 @@ class Dashboard extends React.Component {
                             Dashboard
                         </Heading>
                         <CardBody/>
-                        <NavModal/>
                         <Table variant="simple">
                             <TableCaption>Imperial to metric conversion factors</TableCaption>
                             <Thead>
