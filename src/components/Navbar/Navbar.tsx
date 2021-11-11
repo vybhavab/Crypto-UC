@@ -249,35 +249,32 @@ import {
           href: '#',
         },
         {
+          label: 'Roadmap',
+          subLabel: 'Timeline and future goals',
+          href: '#',
+        },
+        {
           label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
+          subLabel: 'Up-and-coming Updates',
           href: '#',
         },
       ],
     },
     {
-      label: 'Join the Team',
+      label: 'Support Us',
       children: [
         {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
+          label: 'Join Our Team',
+          subLabel: 'Applications are Open',
           href: '#',
         },
         {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
+          label: 'Investors',
+          subLabel: 'Help expand the project and features',
           href: '#',
         },
       ],
-    },
-    {
-      label: 'Students',
-      href: '#',
-    },
-    {
-      label: 'Enterprise',
-      href: '#',
-    },
+    }
   ];
 
   export default Navbar;
