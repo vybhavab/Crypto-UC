@@ -249,9 +249,9 @@ import {
           href: '#',
         },
         {
-          label: 'New & Noteworthy',
-          subLabel: 'Up-and-coming Designers',
-          href: '#',
+          label: 'About Cardano',
+          subLabel: 'Technology Behind UCrypton',
+          href: 'https://www.cardano.org/',
         },
       ],
     },
@@ -272,7 +272,7 @@ import {
     },
     {
       label: 'Students',
-      href: '#',
+      href: '/LoginGoogle',
     },
     {
       label: 'Enterprise',
