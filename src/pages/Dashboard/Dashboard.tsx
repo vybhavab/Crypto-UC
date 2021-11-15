@@ -27,11 +27,11 @@ class Dashboard extends React.Component {
                         <ColorModeSwitcher justifySelf="flex-end" />
                         <VStack spacing={4}>
                             <Heading as="h1">
-                                Dashboard
+                                UCrypton Dashboard
                             </Heading>
                             <CardBody/>
                             <Table variant="simple">
-                                <TableCaption>Imperial to metric conversion factors</TableCaption>
+                                <TableCaption>Transactions for U with VerseOne Inc</TableCaption>
                                 <Thead>
                                     <Tr>
                                     <Th>To convert</Th>
