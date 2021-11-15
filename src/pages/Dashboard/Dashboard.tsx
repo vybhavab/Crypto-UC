@@ -19,6 +19,7 @@ import CardBody from "components/Card/CardBody";
 
 class Dashboard extends React.Component {
   render() {
+
     return (
         <div>
             <Sidebar>
