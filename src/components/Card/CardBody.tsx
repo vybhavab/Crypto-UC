@@ -17,7 +17,7 @@ const CardBody = () => {
         rounded={'lg'}
         p={6}
         textAlign={'center'}>
-          <Text>awd</Text>
+          <Text>Transaction ID</Text>
 
       </Box>
     </Center>

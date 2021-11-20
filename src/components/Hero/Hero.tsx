@@ -7,6 +7,7 @@ import {
   Text,
   Button,
   Stack,
+  ModalFooter,
 } from '@chakra-ui/react';
 
 export default function CallToActionWithAnnotation() {
@@ -51,25 +52,27 @@ export default function CallToActionWithAnnotation() {
               _hover={{
                 bg: '#FFCC33',
               }}>
-              Get Started
+            <a href ="https://www.google.com/">  Get Started </a>
             </Button>
             <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-              Learn more
+            <a href ="\GetStarted">   Learn more </a>
             </Button>
-            <div>
+            </Stack>
+            <footer>
             {/* footer file for putting our names */}  
-              <Text color = {'gray.500'} 
-              spacing={10}
+              <Text color = {'gray.400'} 
+              spacing={100}
               align={'center'}
               alignSelf={'center'}
-              position={'relative'}>
-                <p>VerseOne Technologies Inc.</p>
-                <p></p> 
+              position={'relative'}
+              fontWeight={300}
+              fontSize={{ base: 'xl', sm: '2xl', md: 'xl' }}>
+                <p color="cyan" >ECS 265 - Distributed Databases (Fall 2021) @UC Davis</p>
                 <p>Vybhav Bhargav, Seongwoo Choi, David Haddad, Sairamvinay Vijayaraghavan</p>
               </Text>
-            </div>
+            </footer>
           </Stack>
-        </Stack>
+        
       </Container>
     </>
   );

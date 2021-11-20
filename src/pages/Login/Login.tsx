@@ -27,7 +27,7 @@ const Login = () => {
                     </Text>
 
                     <Text  color={useColorModeValue('#00B2E3', '#00B2E3')}>
-                        {isLoggedIn ? 'LoggedIn' : 'Logged Out'}
+                        {isLoggedIn ? 'LoggedIn' : 'You are currently Logged Out'}
                     </Text>
 
                     {!isLoggedIn ?

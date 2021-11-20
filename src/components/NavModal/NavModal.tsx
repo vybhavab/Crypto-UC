@@ -27,7 +27,7 @@ const NavModal = () => {
          _hover={{
            bg: '#03F9E6',
          }}>
-          Sign In
+        <a href="\Login">  Sign In </a>
         </Button>
         <ImageCard finalRef={finalRef} isOpen={isOpen} onClose={onClose}/>
       </div>

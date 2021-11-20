@@ -244,9 +244,9 @@ import {
       label: 'Inspiration',
       children: [
         {
-          label: 'Explore Design Work',
-          subLabel: 'Trending Design to inspire you',
-          href: '#',
+          label: 'Explore Design and Technology',
+          subLabel: 'The Idea Behind the UCrypton Project',
+          href: '',
         },
         {
           label: 'About Cardano',
@@ -256,26 +256,11 @@ import {
       ],
     },
     {
-      label: 'Join the Team',
-      children: [
-        {
-          label: 'Job Board',
-          subLabel: 'Find your dream design job',
-          href: '#',
-        },
-        {
-          label: 'Freelance Projects',
-          subLabel: 'An exclusive list for contract work',
-          href: '#',
-        },
-      ],
+      label: 'Login',
+      href: '\Login',
     },
     {
-      label: 'Students',
-      href: '/LoginGoogle',
-    },
-    {
-      label: 'Enterprise',
+      label: 'Find Out More',
       href: '#',
     },
   ];

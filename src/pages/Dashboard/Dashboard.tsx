@@ -31,12 +31,14 @@ class Dashboard extends React.Component {
                             </Heading>
                             <CardBody/>
                             <Table variant="simple">
-                                <TableCaption>Transactions for U with VerseOne Inc</TableCaption>
+                                <TableCaption>Transactions for U with UCrypton</TableCaption>
                                 <Thead>
                                     <Tr>
-                                    <Th>To convert</Th>
-                                    <Th>into</Th>
-                                    <Th isNumeric>multiply by</Th>
+                                    <Th>Transaction #</Th>
+                                    <Th>INFO</Th>
+                                    <Th isNumeric>Amount</Th>
+                                    <Th isNumeric>Date</Th>
+                                    <Th isNumeric>Balance</Th>
                                     </Tr>
                                 </Thead>
                                 <Tbody>
@@ -58,9 +60,11 @@ class Dashboard extends React.Component {
                                 </Tbody>
                                 <Tfoot>
                                     <Tr>
-                                    <Th>To convert</Th>
-                                    <Th>into</Th>
-                                    <Th isNumeric>multiply by</Th>
+                                    <Th>End of Transaction #</Th>
+                                    <Th>End of Info</Th>
+                                    <Th>End of Amount Info</Th>
+                                    <Th>End of Date Info</Th>
+                                    <Th>Amount Left in Balance</Th>
                                     </Tr>
                                 </Tfoot>
                             </Table>
