@@ -1,6 +1,6 @@
 <h1 align="center">UCrypton - Your Transactions Secured By Blockchain Technologies</h1>
 <p align="center">
-  <img src="/src/images/logos/ucrypton/ucrypton.png" alt="ucrypton-logo" width="120px" height="120px"/>
+  <img src="/src/images/logos/ucrypton/ucrypton.png" alt="ucrypton-logo" width="280px" height="220px"/>
   <br>
   <i>UCrypton is a transaction platform and web application for users at the University of California and it is easy to use and most efficient financial application built on Cardano with BlockFrost.io
     <br> using Typescript/JavaScript and other languages with Google Firebase and other third party APIs.</i>
