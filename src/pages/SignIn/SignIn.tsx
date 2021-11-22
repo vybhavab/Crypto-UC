@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import {LoginContext} from 'contexts/LoginContext';
 import {
     Flex,
     Stack,
@@ -13,6 +14,7 @@ import Logout from "components/Logout/logout";
 const Login = () => {
     const [isLoggedIn, setLoggedIn] = useState(false);
     return (
+      <LoginContext.Provider value={isLoggedIn}>
         <div>
           <Flex
                 minH={'100vh'}
@@ -37,6 +39,7 @@ const Login = () => {
                 </Stack>
               </Flex>
         </div>
+      </LoginContext.Provider>
     );
 
 }
