@@ -1,3 +1,43 @@
+<h1 align="center">UCrypton - Your Transactions Secured By Blockchain Technologies</h1>
+<p align="center">
+  <img src="aio/src/assets/images/logos/ucrypton/ucrypton.png" alt="ucrypton-logo" width="120px" height="120px"/>
+  <br>
+  <i>UCrypton is a transaction platform and web application for users at the University of California and it is easy to use and most efficient financial application built on Cardano with BlockFrost.io
+    <br> using Typescript/JavaScript and other languages with Google Firebase and other third party APIs.</i>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://www.blockfrost.io"><strong>www.blockfrost.io</strong></a>
+  <br>
+</p>
+
+<p align="center">
+  <a href="CONTRIBUTING.md">Contributing Guidelines</a>
+  ·
+  <a href="https://github.com/vybhavb/Crypto-UC/issues">Submit an Issue</a>
+  ·
+  <a href="https://www.cardano.org"> About Cardano </a>
+  <br>
+  <br>
+</p>
+
+<p align="center">
+  <a href="https://github.com/vybhavb/Crypto-UC">
+    <img src="https://img.shields.io/badge/UCrypton-for%20U-blue" alt="UCrypton" />
+  </a>&nbsp;
+</p>
+
+## Documentation
+
+Get started with UCrypton, learn the fundamentals and explore advanced topics on our documentation website.
+
+- [Getting Started][quickstart]
+- [Architecture][architecture]
+- [Components and Templates][componentstemplates]
+- [Forms][forms]
+
+### Advanced
 This project was bootstrapped with
 [Create React App](https://github.com/facebook/create-react-app).
 
@@ -64,3 +104,5 @@ You can learn more in the
 [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+**Love UCrypton? :) Give our repo a star :star: :arrow_up:.**
