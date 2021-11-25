@@ -25,19 +25,19 @@ import { Link } from 'react-router-dom';
 import { FiBell, FiChevronDown } from "react-icons/fi";
 import Logout from "components/Logout/logout";
 import LoginGoogle from "components/LoginGoogle/LoginGoogle";
+import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
 
 const NavModal = () => {
   const [currentView, setCurrentView] = React.useState("");   
   const finalRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
   const {loggedIn,loginObj} = useContext(LoginContext);
-  console.log("yoooo");
   
   console.log(loggedIn);
     return (
       <div>
         <HStack spacing={{ base: '0', md: '6' }}>
         
-        
+        <ColorModeSwitcher justifySelf="flex-end" />
         {!loggedIn ?<LoginGoogle />:null }
           
           <Flex alignItems={'center'}  display={ loggedIn ? 'flex' : 'none'} >
