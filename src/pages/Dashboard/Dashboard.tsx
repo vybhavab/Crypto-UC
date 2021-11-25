@@ -16,6 +16,7 @@ import {
 import Sidebar from "components/Sidebar/Sidebar"
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
 import CardBody from "components/Card/CardBody";
+import FirebaseUser from "components/FirebaseUser/FirebaseUser";
 
 class Dashboard extends React.Component {
   render() {
@@ -30,8 +31,8 @@ class Dashboard extends React.Component {
                             <Heading as="h1">
                                 Dashboard
                             </Heading>
-                            <CardBody/>
-                            
+                            {/* <CardBody/> */}
+                            <FirebaseUser/>
                         </VStack>
                     </Grid>
                 </Box>

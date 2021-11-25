@@ -9,15 +9,15 @@ import db from "../../initFirebase";
 import { getDatabase, ref, child, get, set } from "firebase/database";
 
 const CardBody = () => {
-  const [username , setUsername] = useState('');
-  const [email , setEmail] = useState('');
+  // const [username , setUsername] = useState('');
+  // const [email , setEmail] = useState('');
   
-  const Push = () => {
-    set(ref(db, 'users/test'), {
-      username: username,
-      email: email
-    });
-  }
+  // const Push = () => {
+  //   set(ref(firebase, 'users/test'), {
+  //     username: username,
+  //     email: email
+  //   });
+  // }
   return (
     <Center py={6}>
       <Box
@@ -28,14 +28,14 @@ const CardBody = () => {
         rounded={'lg'}
         p={6}
         textAlign={'center'}>
-          <Text>awd</Text>
-            <input placeholder="Enter your username" value={username} 
+          {/* <Text>awd</Text> */}
+            {/* <input placeholder="Enter your username" value={username} 
             onChange={(e) => setUsername(e.target.value)}/>
             <br/><br/>
             <input placeholder="Enter your email" value={email} 
             onChange={(e) => setEmail(e.target.value)}/>
-            <br/><br/> 
-            <button onClick={Push}>PUSH</button>
+            <br/><br/>  */}
+            {/* <button onClick={Push}>PUSH</button> */}
   
       </Box>
     </Center>

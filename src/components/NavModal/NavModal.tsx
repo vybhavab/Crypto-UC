@@ -23,38 +23,25 @@ import {
   } from "@chakra-ui/react"
 import { Link } from 'react-router-dom';
 import { FiBell, FiChevronDown } from "react-icons/fi";
+import Logout from "components/Logout/logout";
+import LoginGoogle from "components/LoginGoogle/LoginGoogle";
 
 const NavModal = () => {
   const [currentView, setCurrentView] = React.useState("");   
   const finalRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
-  const isLoggedIn  = useContext(LoginContext);
+  const {loggedIn,loginObj} = useContext(LoginContext);
   console.log("yoooo");
-  console.log(isLoggedIn);
+  
+  console.log(loggedIn);
     return (
       <div>
         <HStack spacing={{ base: '0', md: '6' }}>
-          <Link to={'/signin'}>
-            <Button
-            // display={{ base: 'none', md: 'inline-flex' }}
-            display={ isLoggedIn ? 'none' : 'block'} 
-            fontSize={'sm'}
-            fontWeight={600}
-            color={'white'}
-            bg={'#00B2E3'}
-            href={'#'}
-            _hover={{
-              bg: '#03F9E6',
-            }}>
-              Sign In {isLoggedIn.toString()}
-            </Button>
-          </Link>
-          <IconButton
-            size="lg"
-            variant="ghost"
-            aria-label="open menu"
-            icon={<FiBell />}
-          />
-          <Flex alignItems={'center'}>
+        
+        
+        {!loggedIn ?<LoginGoogle />:null }
+          
+          <Flex alignItems={'center'}  display={ loggedIn ? 'flex' : 'none'} >
+            
             <Menu>
               <MenuButton
                 py={2}
@@ -63,16 +50,14 @@ const NavModal = () => {
                 <HStack>
                   <Avatar
                     size={'sm'}
-                    src={
-                      'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
-                    }
+                    src={loginObj.imageUrl}
                   />
                   <VStack
                     display={{ base: 'none', md: 'flex' }}
                     alignItems="flex-start"
                     spacing="1px"
                     ml="2">
-                    <Text fontSize="sm">John Doe</Text>
+                    <Text fontSize="sm">{loginObj.name.split(' ')[0]}</Text>
                 
                   </VStack>
                   <Box display={{ base: 'none', md: 'flex' }}>
@@ -101,9 +86,7 @@ const NavModal = () => {
                     <Flex justify={'center'} mt={-12}>
                       <Avatar
                         size={'xl'}
-                        src={
-                          'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&q=80&fm=jpg&crop=faces&fit=crop&h=200&w=200&ixid=eyJhcHBfaWQiOjE3Nzg0fQ'
-                        }
+                        src={loginObj.imageUrl}
                         alt={'Author'}
                         css={{
                           border: '2px solid white',
@@ -114,9 +97,9 @@ const NavModal = () => {
                     <Box p={6}>
                       <Stack spacing={0} align={'center'} mb={5}>
                         <Heading fontSize={'2xl'} fontWeight={500} fontFamily={'body'}>
-                          John Doe
+                        {loginObj.name}
                         </Heading>
-                        <Text color={'gray.500'}>johndoe@ucdavis.edu</Text>
+                        <Text color={'gray.500'}>{loginObj.email}</Text>
                       </Stack>
 
                       <Stack direction={'row'} justify={'center'} spacing={6}>
@@ -154,7 +137,7 @@ const NavModal = () => {
                       <MenuDivider />
                       <MenuItem>Help</MenuItem>
                       <MenuDivider />
-                      <MenuItem color='red'>Sign out</MenuItem>
+                      <MenuItem color='red'><Logout></Logout></MenuItem>
 
                   
                     </Box>

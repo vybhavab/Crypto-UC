@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useContext} from "react";
 import {LoginContext} from 'contexts/LoginContext';
 import {
     Flex,
@@ -12,9 +12,8 @@ import LoginGoogle from "components/LoginGoogle/LoginGoogle";
 import Logout from "components/Logout/logout";
 
 const Login = () => {
-    const [isLoggedIn, setLoggedIn] = useState(false);
+    const {loggedIn} = useContext(LoginContext);
     return (
-      <LoginContext.Provider value={isLoggedIn}>
         <div>
           <Flex
                 minH={'100vh'}
@@ -29,17 +28,16 @@ const Login = () => {
                     </Text>
 
                     <Text  color={useColorModeValue('#00B2E3', '#00B2E3')}>
-                        {isLoggedIn ? 'LoggedIn' : 'Logged Out'}
+                        {loggedIn ? 'Signed In' : 'Signed Out'}
                     </Text>
 
-                    {!isLoggedIn ?
-                        <LoginGoogle setIsLoggedIn={setLoggedIn} />:<Logout setIsLoggedIn={setLoggedIn}/>
+                    {!loggedIn ?
+                        <LoginGoogle />:<Logout />
                     }
 
                 </Stack>
               </Flex>
         </div>
-      </LoginContext.Provider>
     );
 
 }
