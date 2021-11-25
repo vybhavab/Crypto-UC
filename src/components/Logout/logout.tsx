@@ -24,14 +24,7 @@ const Logout = () => {
 
   return (
     <Center>
-      <Button
-        w={'full'}
-        maxW={'md'}
-        variant={'outline'}
-        onClick={signOut}
-      >
-        <Text>Sign Out</Text>
-      </Button>
+        <Text onClick={signOut} color="red">Sign Out</Text>
     </Center>
   );
 }
