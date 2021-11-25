@@ -56,6 +56,18 @@ export default function CallToActionWithAnnotation() {
             <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
               Learn more
             </Button>
+            <div>
+            {/* footer file for putting our names */}  
+              <Text color = {'gray.500'} 
+              spacing={10}
+              align={'center'}
+              alignSelf={'center'}
+              position={'relative'}>
+                <p>VerseOne Technologies Inc.</p>
+                <p></p> 
+                <p>Vybhav Bhargav, Seongwoo Choi, David Haddad, Sairamvinay Vijayaraghavan</p>
+              </Text>
+            </div>
           </Stack>
         </Stack>
       </Container>
