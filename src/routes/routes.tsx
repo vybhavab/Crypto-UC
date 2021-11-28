@@ -2,7 +2,7 @@
 import React from "react";
 import Home from "pages/Home/Home";
 import Sidebar from "components/Sidebar/Sidebar";
-
+import LearnMore from "pages/LearnMore/LearnMore";
 import PageNotFound from "pages/PageNotFound/PageNotFound";
 import Dashboard from "pages/Dashboard/Dashboard";
 import Navbar from "components/Navbar/Navbar";
@@ -12,6 +12,7 @@ import Pay from "pages/Dashboard/Pay";
 import InviteOthers from "pages/Dashboard/InviteOthers";
 import Learn from "pages/Dashboard/Learn";
 import Notifications from "pages/Dashboard/Notifications";
+import OurTeam from "pages/LearnMore/OurTeam";
 
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
@@ -22,6 +23,8 @@ const AppRoutes = () => {
     <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route path="/learnmore" component={LearnMore}/>
+        <Route path="/ourteam" component={OurTeam}/>
         <Sidebar>
           <Route path="/dashboard" component={Dashboard}/>
           <Route path="/assets" component={Assets}/>
