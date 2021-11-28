@@ -1,4 +1,5 @@
 import React, { ReactNode } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Heading,
   Image,
@@ -15,7 +16,6 @@ import {
   VStack,
   Icon,
   useColorModeValue,
-  Link,
   Drawer,
   DrawerContent,
   Text,
@@ -43,14 +43,15 @@ import { useDisclosure } from "@chakra-ui/react";
 interface LinkItemProps {
   name: string;
   icon: IconType;
+  path: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Assets', icon: GiTwoCoins },
-  { name: 'Trade', icon: FiTrendingUp },
-  { name: 'Pay', icon: FiCompass },
-  { name: 'Learn and Earn ', icon: BiBook },
-  { name: 'Notifications', icon: FiSettings },
-  { name: 'Invite Friends', icon: FaUserFriends },
+  { name: 'Assets', icon: GiTwoCoins, path:'/assets' },
+  { name: 'Crypto Market', icon: FiTrendingUp, path:'/market' },
+  { name: 'Pay', icon: FiCompass ,path:'/pay'},
+  { name: 'Learn to Earn', icon: BiBook,path:'/learntoearn' },
+  { name: 'Notifications', icon: FiSettings,path:'/notifications' },
+  { name: 'Invite Others', icon: FaUserFriends,path:'/invite' },
 ];
 
 const Sidebar = ({
@@ -105,15 +106,12 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
       overflow="hidden"
       borderRadius="lg"
       {...rest}>
-      <Flex h="20" alignItems="center" mx="8" justifyContent="space-between">
-        <Text fontSize="2xl" fontFamily="monospace" fontWeight="bold">
-          UCrypton
-        </Text>
+      <Flex h="10" alignItems="center" mx="8" justifyContent="space-between">
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
       </Flex>
-      {LinkItems.map((link) => (
-        <NavItem key={link.name} icon={link.icon}>
-          {link.name}
+      {LinkItems.map((itemlink) => (
+        <NavItem key={itemlink.name} icon={itemlink.icon} path={itemlink.path}>
+          {itemlink.name}
         </NavItem>
       ))}
     </Box>
@@ -122,11 +120,12 @@ const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
 
 interface NavItemProps extends FlexProps {
   icon: IconType;
+  path: string;
   children: ReactText;
 }
-const NavItem = ({ icon, children, ...rest }: NavItemProps) => {
+const NavItem = ({ icon,path, children, ...rest }: NavItemProps) => {
   return (
-    <Link href="#" style={{ textDecoration: 'none' }}>
+    <Link to={path} style={{ textDecoration: 'none' }}>
       <Flex
         align="center"
         p="4"
