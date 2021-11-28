@@ -28,7 +28,6 @@ import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
 const NavModal = () => {
   const { loggedIn, loginObj } = useContext(LoginContext);
 
-  console.log(loggedIn);
   return (
     <div>
       <HStack spacing={{ base: '0', md: '6' }}>

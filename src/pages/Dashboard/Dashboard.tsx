@@ -7,6 +7,7 @@ import {
 } from "@chakra-ui/react";
 import Sidebar from "components/Sidebar/Sidebar"
 import FirebaseUser from "components/FirebaseUser/FirebaseUser";
+import Blockfrost from "middleware/blockfrost";
 
 class Dashboard extends React.Component {
     render() {
@@ -20,6 +21,7 @@ class Dashboard extends React.Component {
                                 <Heading as="h1">
                                     Dashboard
                                 </Heading>
+                                <Blockfrost/>
                                 <FirebaseUser />
                             </VStack>
                         </Grid>

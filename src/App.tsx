@@ -6,7 +6,8 @@ import Dashboard from "./pages/Dashboard/Dashboard";
 import SignIn from "./pages/SignIn/SignIn";
 import PageNotFound from "./pages/PageNotFound/PageNotFound";
 import Navbar from "components/Navbar/Navbar";
-import {LoginContext} from "contexts/LoginContext"
+import {LoginContext} from "contexts/LoginContext";
+import Blockfrost from "middleware/blockfrost";
 
 let login_obj={
   googleId: "" ,
@@ -21,9 +22,10 @@ let login_obj={
 const App = () => {
     const [isSignedIn, setSignIn] = useState(false);
     const [loginObj, setLoginObj] = useState(login_obj);
-
+    
     return (
       <LoginContext.Provider value={{loggedIn: isSignedIn, setLoggedIn: setSignIn,loginObj:loginObj,setLoginObj:setLoginObj}}>
+        
           <Router>
             <Navbar />
               <Switch>
