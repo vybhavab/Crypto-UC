@@ -8,6 +8,7 @@ import {
   Button,
   Stack,
 } from '@chakra-ui/react';
+import {Link} from 'react-router-dom';
 
 export default function CallToActionWithAnnotation() {
   return (
@@ -43,19 +44,18 @@ export default function CallToActionWithAnnotation() {
             align={'center'}
             alignSelf={'center'}
             position={'relative'}>
-            <Button
-              colorScheme={'green'}
-              bg={'#00B2E3'}
-              rounded={'full'}
-              px={6}
-              _hover={{
-                bg: '#FFCC33',
-              }}>
-            <a href ="#">  Get Started </a>
-            </Button>
-            <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
-            <a href ="\GetStarted">   Learn more </a>
-            </Button>
+            <Link to="/learnmore">
+              <Button
+                colorScheme={'green'}
+                bg={'#00B2E3'}
+                rounded={'full'}
+                px={6}
+                _hover={{
+                  bg: '#FFCC33',
+                }}>
+                <Text>Learn more </Text>
+              </Button>
+            </Link>
             </Stack>
             <footer>
             {/* footer file for putting our names */}

@@ -28,6 +28,7 @@ import NavModal from "components/NavModal/NavModal";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
+  
   return (
     <Box>
       <Flex
@@ -270,7 +271,7 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Our Team',
         subLabel: 'Graduate Students @ ECS265',
-        href: '#',
+        href: '/ourteam',
       },
       {
         label: 'Presentation',

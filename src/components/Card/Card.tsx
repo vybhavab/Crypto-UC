@@ -1,8 +1,9 @@
 import React from "react";
 import { Box, useStyleConfig } from "@chakra-ui/react";
-const  CardBody = (props:any) =>{
+
+const Card = (props:any) => {
   const { variant, children, ...rest } = props;
-  const styles = useStyleConfig("CardBody", { variant });
+  const styles = useStyleConfig("Card", { variant });
   // Pass the computed styles into the `__css` prop
   return (
     <Box __css={styles} {...rest}>
@@ -11,4 +12,4 @@ const  CardBody = (props:any) =>{
   );
 }
 
-export default CardBody;
+export default Card;
