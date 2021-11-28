@@ -7,7 +7,6 @@ import {
   Text,
   Button,
   Stack,
-  ModalFooter,
 } from '@chakra-ui/react';
 
 export default function CallToActionWithAnnotation() {
@@ -59,8 +58,8 @@ export default function CallToActionWithAnnotation() {
             </Button>
             </Stack>
             <footer>
-            {/* footer file for putting our names */}  
-              <Text color = {'gray.400'} 
+            {/* footer file for putting our names */}
+              <Text color = {'gray.400'}
               spacing={100}
               align={'center'}
               alignSelf={'center'}
@@ -72,7 +71,6 @@ export default function CallToActionWithAnnotation() {
               </Text>
             </footer>
           </Stack>
-        
       </Container>
     </>
   );
