@@ -1,4 +1,4 @@
-import React,  { useContext, useState }  from 'react';
+import React,  { useState }  from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import Home from "./pages/Home/Home";

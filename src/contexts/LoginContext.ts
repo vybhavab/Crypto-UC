@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import { createContext } from "react";
 
 interface LoginObj{
         googleId: string ,
@@ -23,5 +23,5 @@ const LoginContext = createContext({
     },
     setLoginObj: (_val:LoginObj) => {}
   });
-  
+
 export {LoginContext};

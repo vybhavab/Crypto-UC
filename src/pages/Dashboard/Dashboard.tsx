@@ -4,17 +4,8 @@ import {
     Heading,
     VStack,
     Grid,
-    Table,
-    Thead,
-    Tbody,
-    Tfoot,
-    Tr,
-    Th,
-    Td,
-    TableCaption,
 } from "@chakra-ui/react";
 import Sidebar from "components/Sidebar/Sidebar"
-import CardBody from "components/Card/CardBody";
 import FirebaseUser from "components/FirebaseUser/FirebaseUser";
 
 class Dashboard extends React.Component {
@@ -29,7 +20,6 @@ class Dashboard extends React.Component {
                                 <Heading as="h1">
                                     Dashboard
                                 </Heading>
-                                {/* <CardBody/> */}
                                 <FirebaseUser />
                             </VStack>
                         </Grid>

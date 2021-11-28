@@ -6,7 +6,6 @@ import {
   Center,
   useColorModeValue,
   Flex,
-  IconButton,
   Menu,
   MenuButton,
   Avatar,
@@ -21,15 +20,12 @@ import {
   Text,
   Image
 } from "@chakra-ui/react"
-import { Link } from 'react-router-dom';
-import { FiBell, FiChevronDown } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 import Logout from "components/Logout/logout";
 import LoginGoogle from "components/LoginGoogle/LoginGoogle";
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
 
 const NavModal = () => {
-  const [currentView, setCurrentView] = React.useState("");
-  const finalRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
   const { loggedIn, loginObj } = useContext(LoginContext);
 
   console.log(loggedIn);

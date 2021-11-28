@@ -1,49 +1,37 @@
 import React, { useContext } from 'react';
-import firebase from "initFirebase";
-import { getDatabase, ref, child, get, set } from "firebase/database";
+import { firebase } from "initFirebase";
+import { getDatabase, ref, set } from "firebase/database";
 import { LoginContext } from 'contexts/LoginContext';
+import { getUserData, setData } from 'utils/firebase';
 import {
     Box,
     Center,
     Text,
     useColorModeValue,
   } from '@chakra-ui/react';
-  
-function getUserData (dbRef:any, googleId:string) : boolean {
-    get(child(dbRef, `users/${googleId}`)).then((snapshot) => {
-        if (snapshot.exists()) {
-        console.log(snapshot.val());
-        return true;
-        } else {
-        console.log("No data available");
-        return false;
-        }
-    }).catch((error) => {
-        console.error(error);
-        return false;
-    });
-    return false;
-}
+
 const FirebaseUser = () => {
     const {loginObj} = useContext(LoginContext);
     const db = getDatabase(firebase);
-    const dbRef = ref(db);
 
     console.log(loginObj);
-   let userFound  = getUserData(dbRef,loginObj.googleId);
-   
+   let userFound  = getUserData(loginObj.googleId);
+
     const Push = () => {
         if (!userFound){
             userFound = true;
-            set(ref(db, `users/${loginObj.googleId}`), {
+            const userObj = {
                 name:loginObj.name,
                 email:loginObj.email,
                 imageUrl:loginObj.imageUrl,
                 cardano_acct_addr:loginObj.cardano_acct_addr,
                 campus_id:loginObj.campus_id,
                 account_type:loginObj.account_type
+            }
+            setData(`users/${loginObj.googleId}`,userObj);
+            set(ref(db, `users/${loginObj.googleId}`), {
             });
-            getUserData(dbRef,loginObj.googleId);
+            getUserData(loginObj.googleId);
         }
     };
 

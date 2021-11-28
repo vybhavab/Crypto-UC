@@ -10,7 +10,7 @@ import { LoginContext } from "contexts/LoginContext";
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 
 const LoginGoogle = () => {
-  const {loggedIn, setLoggedIn, setLoginObj,loginObj} = useContext(LoginContext);
+  const { setLoggedIn, setLoginObj,loginObj } = useContext(LoginContext);
   const onLoginSuccess = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
     setLoggedIn(true);
     const res = response as GoogleLoginResponse;

@@ -23,15 +23,11 @@ import {
   FlexProps,
   Menu,
   MenuButton,
-  MenuDivider,
-  MenuItem,
   MenuList,
 } from '@chakra-ui/react';
 import {
-  FiHome,
   FiTrendingUp,
   FiCompass,
-  FiStar,
   FiSettings,
   FiMenu,
   FiBell,
@@ -42,7 +38,6 @@ import { BiBook } from 'react-icons/bi';
 import { FaUserFriends } from 'react-icons/fa'
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
-import ImageCard from 'components/Sidebar/Sidebar';
 import { useDisclosure } from "@chakra-ui/react";
 
 interface LinkItemProps {
@@ -64,7 +59,6 @@ const Sidebar = ({
   children: ReactNode;
 }) => {
   const { isOpen, onOpen, onClose } = useDisclosure();
-  const finalRef = React.useRef() as React.MutableRefObject<HTMLInputElement>;
 
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
