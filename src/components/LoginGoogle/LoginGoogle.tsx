@@ -1,26 +1,34 @@
-import React from "react";
+import React, {useContext}from "react";
 import {GoogleLoginResponse, GoogleLoginResponseOffline, useGoogleLogin} from 'react-google-login';
 import { FcGoogle } from 'react-icons/fc'
 import { Button, Center, Text } from "@chakra-ui/react";
+import { LoginContext } from "contexts/LoginContext";
 
 // TODO: Refresh token
 
-interface Props {
-  setIsLoggedIn: (isLoggedIn: boolean) => void;
-}
 
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 
-const LoginGoogle = (props: Props) => {
-
+const LoginGoogle = () => {
+  const { setLoggedIn, setLoginObj,loginObj } = useContext(LoginContext);
   const onLoginSuccess = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
-    props.setIsLoggedIn(true);
-    console.log(response);
+    setLoggedIn(true);
+    const res = response as GoogleLoginResponse;
+    setLoginObj({...loginObj,
+      googleId: res.googleId,
+      name: res.profileObj.name,
+      email: res.profileObj.email,
+      imageUrl: res.profileObj.imageUrl,
+      cardano_acct_addr: "test123",
+      campus_id: "Davis",
+      account_type: "Student"
+    });
+    console.log(res.profileObj);
     //TODO: refresh token
   }
 
   const onLoginFailure = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
-    props.setIsLoggedIn(false);
+    setLoggedIn(false);
     console.log(response);
     //TODO: push to failure
   }
@@ -35,17 +43,16 @@ const LoginGoogle = (props: Props) => {
   )
 
   return (
-      <Center p={8}>
+      <Center p={2}>
         <Button
-          w={'full'}
-          maxW={'md'}
           variant={'outline'}
           leftIcon={<FcGoogle />}
+          _hover={{
+            bg: '#03F9E6',
+          }}
           onClick={signIn}
         >
-          <Center>
-            <Text>Sign in with Google</Text>
-          </Center>
+         <Text>Sign in with Google</Text>
         </Button>
       </Center>
   );

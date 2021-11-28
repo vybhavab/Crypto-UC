@@ -1,17 +1,14 @@
-import { Button, Center, Text } from '@chakra-ui/react';
-import React from 'react';
+import { Center, Text } from '@chakra-ui/react';
+import React, {useContext}from 'react';
 import { useGoogleLogout } from 'react-google-login';
-
-interface Props {
-  setIsLoggedIn: (isLoggedIn: boolean) => void;
-}
+import { LoginContext } from 'contexts/LoginContext';
 
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 
-const Logout = (props: Props) => {
-
+const Logout = () => {
+  const { setLoggedIn } = useContext(LoginContext);
   const onSuccess = () => {
-    props.setIsLoggedIn(false);
+    setLoggedIn(false);
     console.log('logged out');
   }
 
@@ -27,14 +24,7 @@ const Logout = (props: Props) => {
 
   return (
     <Center>
-      <Button
-        w={'full'}
-        maxW={'md'}
-        variant={'outline'}
-        onClick={signOut}
-      >
-        <Text>Log Out</Text>
-      </Button>
+        <Text onClick={signOut} color="red">Sign Out</Text>
     </Center>
   );
 }
