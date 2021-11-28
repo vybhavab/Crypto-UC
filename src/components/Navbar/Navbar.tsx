@@ -265,17 +265,27 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'Support Us',
+    label: 'About Us',
     children: [
       {
-        label: 'Join Our Team',
-        subLabel: 'Applications are Open',
+        label: 'Our Team',
+        subLabel: 'Graduate Students @ ECS265',
         href: '#',
       },
       {
-        label: 'Investors',
-        subLabel: 'Help expand the project and features',
-        href: '#',
+        label: 'Presentation',
+        subLabel: 'Link to Our Presentation (UC Davis Only)',
+        href: 'https://docs.google.com/presentation/d/1h7Oo8X_rWLohH7QKiK6sSRyj7pEG3mUp/edit?usp=sharing&ouid=114062191101858965561&rtpof=true&sd=true',
+      },
+    ],
+  },
+  {
+    label: 'GitHub',
+    children: [
+      {
+        label: 'Link to Source Code',
+        subLabel: 'Visit GitHub for a Detailed Source Code Implementation',
+        href: 'https://github.com/vybhavb/Crypto-UC',
       },
     ],
   }

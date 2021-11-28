@@ -51,7 +51,7 @@ export default function CallToActionWithAnnotation() {
               _hover={{
                 bg: '#FFCC33',
               }}>
-            <a href ="https://www.google.com/">  Get Started </a>
+            <a href ="#">  Get Started </a>
             </Button>
             <Button variant={'link'} colorScheme={'blue'} size={'sm'}>
             <a href ="\GetStarted">   Learn more </a>
