@@ -24,10 +24,8 @@ const Tables=()=> {
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
-    <Flex direction="column" pt={{ base: "120px", md: "75px" }}>
-    <Card  borderWidth='1px' borderRadius='lg'  my="22px" borderoverflowX={{ sm: "scroll", xl: "hidden" }}>
-      <Center>
-        <VStack>
+    <Flex direction="column"  pt={{ base: "120px", md: "75px" }}>
+    <Card  p={10} borderWidth='1px' borderRadius='lg'  my="22px" borderoverflowX={{ sm: "scroll", xl: "hidden" }}>
         <CardHeader p="6px 0px 22px 0px">
           <Text fontSize="xl" color={textColor} fontWeight="bold">
             Authors Table
@@ -65,11 +63,10 @@ const Tables=()=> {
           </Table>
           
         </CardBody>
-        </VStack>
-      </Center>
+        {/* </VStack> */}
+      {/* </Center> */}
     </Card>
-    <Card borderWidth='1px' borderRadius='lg'
-      my="22px"
+    <Card p={10} borderWidth='1px' borderRadius='lg'  my="22px" 
       overflowX={{ sm: "scroll", xl: "hidden" }}
     >
       <CardHeader p="6px 0px 22px 0px">
