@@ -4,7 +4,6 @@ import {
     Heading,
     VStack,
     Grid,
-    Text,
     Image
   } from "@chakra-ui/react";
 import roadmapImage from 'assets/img/Timeline.png';

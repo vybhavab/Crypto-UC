@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Flex,Text } from "@chakra-ui/layout";
-import { Badge, Grid, HStack, Icon, Stat, StatArrow, StatHelpText, StatNumber, useColorModeValue } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/layout";
+import {  HStack, Icon, Stat, StatArrow, StatHelpText, StatNumber, useColorModeValue } from "@chakra-ui/react";
 
 const PortfolioCard = (props:any) =>{
     return (

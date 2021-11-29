@@ -1,9 +1,8 @@
 import React from "react";
 import PortfolioCard from "components/Card/PortfolioCard";
-import { Box, Flex, HStack,  SimpleGrid,  VStack } from "@chakra-ui/layout";
+import { Box, HStack,   VStack } from "@chakra-ui/layout";
 import {ImDatabase} from "react-icons/im";
 import { BiDollar } from "react-icons/bi";
-import ChartTest from "components/Charts/ChartTest";
 import AreaRechart from "components/Charts/AreaChart";
 
 const Portfolio = () =>{

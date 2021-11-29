@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { BarChart, CartesianGrid, XAxis, YAxis, Bar, ResponsiveContainer} from 'recharts';
+import React from "react";
+import { BarChart, XAxis, YAxis, Bar, ResponsiveContainer} from 'recharts';
 
 const ChartTest= (props:any) =>{
   const data = [

@@ -14,21 +14,15 @@ import {
 } from '@chakra-ui/react';
 import {
   FiTrendingUp,
-  FiCompass,
-  FiSettings,
-  FiMenu,
-  FiBell,
-  FiChevronDown,
+  FiMenu
 } from 'react-icons/fi';
 import { GiTwoCoins } from 'react-icons/gi';
-import { BiBook, BiWallet } from 'react-icons/bi';
-import { FaUserFriends, FaWallet } from 'react-icons/fa'
+import { BiWallet } from 'react-icons/bi';
+import { FaUserFriends} from 'react-icons/fa'
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 import { useDisclosure } from "@chakra-ui/react";
-import { getDatabase } from "firebase/database";
 import { getUserData, setData } from "utils/firebase";
-import { firebase } from "initFirebase";
 import { LoginContext } from 'contexts/LoginContext';
 
 interface LinkItemProps {

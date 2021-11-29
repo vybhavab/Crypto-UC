@@ -1,6 +1,6 @@
 import React from "react";
-import { Box, Flex,Text } from "@chakra-ui/layout";
-import { Badge, Button, Grid, HStack, Icon, Stat, StatArrow, StatHelpText, StatNumber } from "@chakra-ui/react";
+import { Box,Text } from "@chakra-ui/layout";
+import {  Button,  HStack, Icon } from "@chakra-ui/react";
 
 const PayCard = (props:any) =>{
     return (
@@ -9,9 +9,7 @@ const PayCard = (props:any) =>{
                 <Icon as={props.icon} />
                 <Text>{props.title} </Text>
             </HStack>
-        {/* <Button leftIcon={<Icon as={props.icon} />} size='lg' colorScheme={props.color}>
-            {props.title}  
-        </Button> */}
+
         </Box>
     )
 }

@@ -4,7 +4,6 @@ import {
     Heading,
     HStack,
     Grid,
-    Center,
     VStack,
   } from "@chakra-ui/react";
 import TeamMemberCard from "components/Card/TeamMemberCard";
@@ -18,8 +17,6 @@ import jeju1 from "assets/img/jeju1.jpg";
 import lebanon from "assets/img/lebanon.jpg";
 
 const OurTeam = () => {
-    const image =  'https://images.unsplash.com/photo-1518051870910-a46e30d9db16?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1350&q=80';
-    
     return (
         
        
