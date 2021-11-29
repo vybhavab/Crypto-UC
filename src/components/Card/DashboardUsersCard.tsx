@@ -1,6 +1,5 @@
 import { Box, Center, Flex, Icon, useColorModeValue, Text, Progress } from "@chakra-ui/react";
 import React from "react";
-import { BiWallet } from "react-icons/bi";
 
 const DashboardUsersCard =(props:any) =>{
     return(
@@ -8,7 +7,7 @@ const DashboardUsersCard =(props:any) =>{
                   <Flex alignItems="center">
                     <Box bg={'#00b2e3'}  p={2}  rounded='12px' >
                         <Center>
-                            <Icon as={BiWallet} color={useColorModeValue('white', 'white')} w={4} h={4}/> 
+                            <Icon as={props.icon} color={useColorModeValue('white', 'white')} w={4} h={4}/> 
                         </Center>
                     </Box>
                     <Box w={1} >
