@@ -1,37 +1,26 @@
 import React from "react";
 import { Box, Flex,Text } from "@chakra-ui/layout";
-import { Badge, Grid } from "@chakra-ui/react";
+import { Badge, Grid, HStack, Icon, Stat, StatArrow, StatHelpText, StatNumber } from "@chakra-ui/react";
 
 const PortfolioCard = (props:any) =>{
     return (
-        <Box maxW='sm' borderWidth='1px' borderRadius='lg' overflow='hidden'>
+        <Box  borderWidth='1px' borderRadius='lg' overflow='hidden'>
             <Box p='6'>
-                <Box display='flex' alignItems='baseline'>
-                    <Box
-                        mt='1'
-                        fontWeight='semibold'
-                        as='h4'
-                        lineHeight='tight'
-                        isTruncated
-                    >
-                        {props.title}
+                <HStack >
+                    <Box><Icon as={props.icon} />
                     </Box>
-                </Box>
-
-               
-
-                <Box>
-                    formattedPrice 
-                    <Box as='span' color='gray.600' fontSize='sm'>
-                    / wk
+                    <Box>
+                        {props.title}  
                     </Box>
-                </Box>
+                </HStack>
+                <Stat>
+                    <StatNumber>{props.amount}</StatNumber>
+                    <StatHelpText>
+                    <StatArrow type={props.arrow}/>
+                    {props.percent}
+                    </StatHelpText>
+                </Stat>
 
-                <Box display='flex' mt='2' alignItems='center'>
-                    <Box as='span' ml='2' color='gray.600' fontSize='sm'>
-                    review
-                    </Box>
-                </Box>
             </Box>
         </Box>
     )

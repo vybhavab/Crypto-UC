@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@blockfrost/blockfrost-js": "^2.0.2",
+    "@chakra-ui/core": "^0.8.0",
     "@chakra-ui/icons": "^1.0.17",
     "@chakra-ui/react": "^1.6.12",
     "@emotion/react": "^11.5.0",
@@ -29,6 +30,7 @@
     "react-icons": "^4.3.1",
     "react-router-dom": "^5.3.0",
     "react-scripts": "^3.4.4",
+    "recharts": "^2.1.6",
     "ts-react-google-login-component": "^1.1.9",
     "web-vitals": "^2.1.2"
   },
