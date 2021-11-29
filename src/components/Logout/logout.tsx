@@ -1,4 +1,4 @@
-import { Center, Text } from '@chakra-ui/react';
+import { Box, Center, Text } from '@chakra-ui/react';
 import React, {useContext}from 'react';
 import { useGoogleLogout } from 'react-google-login';
 import { LoginContext } from 'contexts/LoginContext';
@@ -24,7 +24,7 @@ const Logout = () => {
 
   return (
     <Center>
-        <Text onClick={signOut} color="red">Sign Out</Text>
+        <Box onClick={signOut} pr={180} color="red">Sign Out</Box>
     </Center>
   );
 }

@@ -17,9 +17,9 @@ const Pay = () =>{
                 potentially Scan qr 
                 community spending */}
             {/* <SimpleGrid > */}
-                <HStack justifyContent="center">
-                    <PayCard title={"Send"} icon={IoSend} color={"blue"}/>
-                    <PayCard title={"Receive"} icon={GiReceiveMoney} color={"orange"}/>
+                <HStack pt={10} justifyContent="center" spacing={5}>
+                    <PayCard title={"Send"} icon={IoSend} color={"#00b2e7"}/>
+                    <PayCard title={"Receive"} icon={GiReceiveMoney} color={"#FFCC33"}/>
                 </HStack>
 
                 <Tables/>

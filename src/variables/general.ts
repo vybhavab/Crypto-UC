@@ -190,56 +190,62 @@ export const tablesTableData = [
   {
     logo: avatar1,
     name: "Esthera Jackson",
-    email: "alexa@simmmple.com",
-    subdomain: "Manager",
-    domain: "Organization",
-    status: "Online",
-    date: "14/06/21",
+    email: "alexa@ucdavis",
+    subdomain: "UC Davis",
+    domain: "Student",
+    status: "200.01",
+    date: "11/05/21",
+    address: "a075abe9a4c0ca81c29421dd37208ac1160ecd207541a8ec89c75a0071ae2529"
   },
   {
     logo: avatar2,
     name: "Alexa Liras",
-    email: "laurent@simmmple.com",
-    subdomain: "Programmer",
-    domain: "Developer",
-    status: "Offline",
-    date: "12/05/21",
+    email: "laurent@ucdavis.edu",
+    subdomain: "UC Davis",
+    domain: "Department",
+    status: "12.430",
+    date: "08/26/21",
+    address: "8928aae63c84d87ea098564d1e03ad813f107add474e56aedd286349c0c03ea4"
   },
   {
     logo: avatar3,
     name: "Laurent Michael",
-    email: "laurent@simmmple.com",
-    subdomain: "Executive",
-    domain: "Projects",
-    status: "Online",
-    date: "07/06/21",
+    email: "bookstore@ucdavis.edu",
+    subdomain: "UC Davis",
+    domain: "Department",
+    status: "-67.122",
+    date: "06/17/21",
+    address: "a900be0818b8d55a7fdf3ad4437dd56a990fbe3accf844324f43a8de34c5cf67"
   },
   {
     logo: avatar4,
     name: "Freduardo Hill",
-    email: "freduardo@simmmple.com",
-    subdomain: "Manager",
-    domain: "Organization",
-    status: "Online",
-    date: "14/11/21",
+    email: "freduardo@ucsc.edu",
+    subdomain: "UC Santa Cruz",
+    domain: "Student",
+    status: "12.765",
+    date: "05/10/21",
+    address: "2279ae477dbdd8facfa570832c91ecfbefe2a246e75e59b1ce46d26b652ef9ff"
   },
   {
     logo: avatar5,
     name: "Daniel Thomas",
-    email: "daniel@simmmple.com",
-    subdomain: "Programmer",
-    domain: "Developer",
-    status: "Offline",
-    date: "21/01/21",
+    email: "daniel@ucdavis.edu",
+    subdomain: "UC Davis",
+    domain: "Student",
+    status: "33.56",
+    date: "01/21/21",
+    address: "aa364bf97566f0bd38738ee1d62a922826b1d08ac4013c708f18fb89aff29e68"
   },
   {
     logo: avatar7,
     name: "Mark Wilson",
-    email: "mark@simmmple.com",
-    subdomain: "Designer",
-    domain: "UI/UX Design",
-    status: "Offline",
-    date: "04/09/20",
+    email: "mark@berkeley.edu",
+    subdomain: "UC Berkley",
+    domain: "Depatment",
+    status: "-1098.43",
+    date: "08/04/20",
+    address: "aa16bf1a7053a628864a1258942da9464e98ae33c0ca6f247fe54e0e7f5ab28e"
   },
 ];
 
@@ -342,13 +348,13 @@ export const billingData = [
 
 export const newestTransactions = [
   {
-    name: "Netflix",
+    name: "Graduate CS Department",
     date: "27 March 2021, at 12:30 PM",
     price: "- $2,500",
     logo: FaArrowDown,
   },
   {
-    name: "Apple",
+    name: "Engineering Department",
     date: "27 March 2021, at 12:30 PM",
     price: "+ $2,500",
     logo: FaArrowUp,
@@ -357,27 +363,27 @@ export const newestTransactions = [
 
 export const olderTransactions = [
   {
-    name: "Stripe",
+    name: "Economics Department",
     date: "26 March 2021, at 13:45 PM",
-    price: "+ $800",
+    price: "+ $10,000",
     logo: FaArrowUp,
   },
   {
-    name: "HubSpot",
+    name: "Law Department",
     date: "26 March 2021, at 12:30 PM",
-    price: "+ $1,700",
+    price: "+ $30,700",
     logo: FaArrowUp,
   },
   {
-    name: "Webflow",
+    name: "Biological Sciences Department",
     date: "26 March 2021, at 05:00 PM",
     price: "Pending",
     logo: AiOutlineExclamation,
   },
   {
-    name: "Microsoft",
+    name: "Graduate CS Department",
     date: "25 March 2021, at 16:30 PM",
-    price: "- $987",
+    price: "- $3,045",
     logo: FaArrowDown,
   },
 ];

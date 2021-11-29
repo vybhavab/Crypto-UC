@@ -4,9 +4,15 @@ import { Badge, Button, Grid, HStack, Icon, Stat, StatArrow, StatHelpText, StatN
 
 const PayCard = (props:any) =>{
     return (
-        <Button leftIcon={<Icon as={props.icon} />} size='lg' colorScheme={props.color}>
+        <Box borderRadius="15" width ="120px" height='70px' as={Button} bg={props.color}>
+            <HStack>
+                <Icon as={props.icon} />
+                <Text>{props.title} </Text>
+            </HStack>
+        {/* <Button leftIcon={<Icon as={props.icon} />} size='lg' colorScheme={props.color}>
             {props.title}  
-        </Button>
+        </Button> */}
+        </Box>
     )
 }
 export default PayCard;

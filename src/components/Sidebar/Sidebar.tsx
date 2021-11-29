@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode , useContext, useEffect} from 'react';
 import { Link } from 'react-router-dom';
 import {
   IconButton,
@@ -26,6 +26,10 @@ import { FaUserFriends, FaWallet } from 'react-icons/fa'
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 import { useDisclosure } from "@chakra-ui/react";
+import { getDatabase } from "firebase/database";
+import { getUserData, setData } from "utils/firebase";
+import { firebase } from "initFirebase";
+import { LoginContext } from 'contexts/LoginContext';
 
 interface LinkItemProps {
   name: string;
@@ -44,8 +48,27 @@ const Sidebar = ({
 }: {
   children: ReactNode;
 }) => {
+  const {loggedIn,loginObj } = useContext(LoginContext);
   const { isOpen, onOpen, onClose } = useDisclosure();
-
+  const pushFirebase = () => {
+      if (!getUserData(loginObj.googleId) && loginObj.name){
+          let userObj = {
+              name:loginObj.name,
+              email:loginObj.email,
+              imageUrl:loginObj.imageUrl,
+              cardano_acct_addr:loginObj.cardano_acct_addr,
+              campus_id:loginObj.campus_id,
+              account_type:loginObj.account_type
+          }
+          setData(loginObj.googleId,userObj);
+          getUserData(loginObj.googleId);
+      }
+  };
+  useEffect(()=>{
+    if (loggedIn){
+      pushFirebase();
+    }
+  })
   return (
     <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
       <SidebarContent

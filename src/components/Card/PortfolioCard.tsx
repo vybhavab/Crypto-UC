@@ -1,11 +1,11 @@
 import React from "react";
 import { Box, Flex,Text } from "@chakra-ui/layout";
-import { Badge, Grid, HStack, Icon, Stat, StatArrow, StatHelpText, StatNumber } from "@chakra-ui/react";
+import { Badge, Grid, HStack, Icon, Stat, StatArrow, StatHelpText, StatNumber, useColorModeValue } from "@chakra-ui/react";
 
 const PortfolioCard = (props:any) =>{
     return (
-        <Box  borderWidth='1px' borderRadius='lg' overflow='hidden'>
-            <Box p='6'>
+        <Box  borderWidth='1px' borderRadius='lg' overflow='hidden'  bg={useColorModeValue('white', 'gray.800')}>
+            <Box p={3}>
                 <HStack >
                     <Box><Icon as={props.icon} />
                     </Box>

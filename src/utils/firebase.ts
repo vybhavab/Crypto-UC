@@ -4,7 +4,7 @@ import { database } from "initFirebase";
 const getUserData = (googleId:string) : boolean => {
     get(child(ref(database), `users/${googleId}`)).then((snapshot) => {
         if (snapshot.exists()) {
-        console.log(snapshot.val());
+        console.log("GET ",snapshot.val());
         return true;
         } else {
         console.log("No data available");
@@ -17,8 +17,8 @@ const getUserData = (googleId:string) : boolean => {
     return false;
 }
 
-const setData = (path: string, value: unknown) => {
-    set(ref(database, path), value);
+const setData = (googleId: string, value: unknown) => {
+    set(ref(database, `users/${googleId}`), value);
 }
 
 export { getUserData, setData }
