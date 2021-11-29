@@ -10,8 +10,12 @@ import {
     Flex,
     Avatar,
     Button,
+    HStack,
+    IconButton,
+    Link,
+    Icon,
   } from '@chakra-ui/react';
-import linkedin from 'assets/icons/linkedin.png';
+import {FaGithub, FaGlobe, FaLinkedinIn} from "react-icons/fa";
 
 
 const TeamMemberCard = (props:any) => {
@@ -54,19 +58,19 @@ const TeamMemberCard = (props:any) => {
                 <Text fontSize={'md'} color={'gray.500'}>{props.email}</Text>
                 </Stack>
                 
-                <Button
-                w={'full'}
-                mt={4}
-                bg={useColorModeValue('#151f21', 'gray.900')}
-                color={'white'}
-                rounded={'md'}
-                _hover={{
-                    transform: 'translateY(-2px)',
-                    boxShadow: 'lg',
-                }}>
-                 {/* <image src=linkedin></image>davidhaddad7 */}
-                 {props.linkedIn}
-                </Button>
+                <Center>
+                    <HStack spacing={3} alignItems="center">
+                        <Link href={props.github}>
+                            <Icon as={FaGithub}/>
+                        </Link>
+                        <Link href={props.linkedIn} >
+                            <Icon as={FaLinkedinIn} />
+                        </Link>
+                        {props.website ? <Link href={props.website}>
+                            <Icon as={FaGlobe}/> </Link>  :null}
+                    </HStack>
+                </Center>
+                
             </Box>
             </Box>
       </Center>

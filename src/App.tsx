@@ -19,7 +19,7 @@ const App = () => {
     return (
       <LoginContext.Provider value={{loggedIn: isSignedIn, setLoggedIn: setSignIn,loginObj:loginObj,setLoginObj:setLoginObj}}>
         
-        <AppRoutes/>
+        <AppRoutes loggedIn={isSignedIn}/>
           
       </LoginContext.Provider>
     )

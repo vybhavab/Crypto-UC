@@ -57,19 +57,6 @@ export default function CallToActionWithAnnotation() {
               </Button>
             </Link>
             </Stack>
-            <footer>
-            {/* footer file for putting our names */}
-              <Text color = {'gray.400'}
-              spacing={100}
-              align={'center'}
-              alignSelf={'center'}
-              position={'relative'}
-              fontWeight={300}
-              fontSize={{ base: 'xl', sm: '2xl', md: 'xl' }}>
-                <p color="cyan" >ECS 265 - Distributed Databases (Fall 2021) @UC Davis</p>
-                <p>Vybhav Bhargav, Seongwoo Choi, David Haddad, Sairamvinay Vijayaraghavan</p>
-              </Text>
-            </footer>
           </Stack>
       </Container>
     </>

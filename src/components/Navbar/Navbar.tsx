@@ -246,17 +246,17 @@ const NAV_ITEMS: Array<NavItem> = [
       {
         label: 'Explore Design Work',
         subLabel: 'Trending Design to inspire you',
-        href: '#',
+        href: '/design',
       },
       {
         label: 'Roadmap',
         subLabel: 'Timeline and future goals',
-        href: '#',
+        href: '/roadmap',
       },
       {
         label: 'New & Noteworthy',
         subLabel: 'Up-and-coming Updates',
-        href: '#',
+        href: '/updates',
       },
       {
         label: 'About Cardano',
@@ -267,28 +267,22 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'About Us',
+    href: '/dashboard',
     children: [
       {
-        label: 'Our Team',
-        subLabel: 'Graduate Students @ ECS265',
+        label: 'Team',
+        subLabel: 'Meet our team members',
         href: '/ourteam',
       },
       {
         label: 'Presentation',
-        subLabel: 'Link to Our Presentation (UC Davis Only)',
         href: 'https://docs.google.com/presentation/d/1h7Oo8X_rWLohH7QKiK6sSRyj7pEG3mUp/edit?usp=sharing&ouid=114062191101858965561&rtpof=true&sd=true',
       },
     ],
   },
   {
     label: 'GitHub',
-    children: [
-      {
-        label: 'Link to Source Code',
-        subLabel: 'Visit GitHub for a Detailed Source Code Implementation',
-        href: 'https://github.com/vybhavb/Crypto-UC',
-      },
-    ],
+    href: 'https://github.com/vybhavb/Crypto-UC'
   }
 ];
 

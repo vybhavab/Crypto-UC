@@ -13,27 +13,23 @@ import {
 import FirebaseUser from "components/FirebaseUser/FirebaseUser";
 import Blockfrost from "middleware/blockfrost";
 
-
-class Dashboard extends React.Component {
-    render() {
-        return (
-            <div>
-                    <Box textAlign="center" fontSize="xl">
-                        <Grid minH="90vh" p={3}>
-                            <VStack spacing={4}>
-                                <Heading as="h1">
-                                    Dashboard
-                                </Heading>
-                                <Blockfrost/>
-                               
-                                <FirebaseUser />
-                            </VStack>
-                        </Grid>
-                    </Box>
-
-            </div>
-        );
-    }
+const Dashboard = () => {
+    return (
+        <div>
+            <Box textAlign="center" fontSize="xl">
+                <Grid minH="90vh" p={3}>
+                    <VStack spacing={4}>
+                        <Heading as="h1">
+                            Dashboard
+                        </Heading>
+                        <Blockfrost/>
+                       
+                        <FirebaseUser />
+                    </VStack>
+                </Grid>
+            </Box>
+        </div>
+    );
 }
 
 export default Dashboard;
