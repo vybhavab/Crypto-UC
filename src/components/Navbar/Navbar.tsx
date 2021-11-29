@@ -271,7 +271,7 @@ const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Presentation',
-    href: 'https://docs.google.com/presentation/d/1h7Oo8X_rWLohH7QKiK6sSRyj7pEG3mUp/edit?usp=sharing&ouid=114062191101858965561&rtpof=true&sd=true',
+    href: 'https://docs.google.com/presentation/d/1wBqMQupTYRNESIKb3ByYaKuLSBvJuIy1/edit?usp=sharing&ouid=110764831055152766777&rtpof=true&sd=true',
   },
   {
     label: 'GitHub',
