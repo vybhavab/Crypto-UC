@@ -30,8 +30,8 @@ const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
   
   return (
-    <Box>
-      <Flex
+    <Box >
+      <Flex  as="nav"
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}
@@ -266,19 +266,12 @@ const NAV_ITEMS: Array<NavItem> = [
     ],
   },
   {
-    label: 'About Us',
-    href: '/dashboard',
-    children: [
-      {
-        label: 'Team',
-        subLabel: 'Meet our team members',
-        href: '/ourteam',
-      },
-      {
-        label: 'Presentation',
-        href: 'https://docs.google.com/presentation/d/1h7Oo8X_rWLohH7QKiK6sSRyj7pEG3mUp/edit?usp=sharing&ouid=114062191101858965561&rtpof=true&sd=true',
-      },
-    ],
+    label: 'Team',
+    href: '/ourteam',
+  },
+  {
+    label: 'Presentation',
+    href: 'https://docs.google.com/presentation/d/1h7Oo8X_rWLohH7QKiK6sSRyj7pEG3mUp/edit?usp=sharing&ouid=114062191101858965561&rtpof=true&sd=true',
   },
   {
     label: 'GitHub',

@@ -25,10 +25,10 @@ const Tables=()=> {
 
   return (
     <Flex direction="column"  pt={{ base: "120px", md: "75px" }}>
-    <Card  p={10} borderWidth='1px' borderRadius='lg'  my="22px" borderoverflowX={{ sm: "scroll", xl: "hidden" }}>
+    <Card  p={10} borderWidth='1px' borderRadius='lg'  overflowX={{ sm: "scroll", xl: "hidden" }}>
         <CardHeader p="6px 0px 22px 0px">
           <Text fontSize="xl" color={textColor} fontWeight="bold">
-            Authors Table
+            Transaction History
           </Text>
         </CardHeader>
       
@@ -37,11 +37,12 @@ const Tables=()=> {
             <Thead>
               <Tr my=".8rem" pl="0px" color="gray.400">
                 <Th pl="0px" color="gray.400">
-                  Author
+                  Name
                 </Th>
-                <Th color="gray.400">Function</Th>
-                <Th color="gray.400">Status</Th>
-                <Th color="gray.400">Employed</Th>
+                <Th color="gray.400">Account Type</Th>
+                <Th color="gray.400">Amount</Th>
+                <Th color="gray.400">Date</Th>
+                <Th color="gray.400" w="10%">Address</Th>
                 <Th></Th>
               </Tr>
             </Thead>
@@ -56,6 +57,7 @@ const Tables=()=> {
                     domain={row.domain}
                     status={row.status}
                     date={row.date}
+                    address={row.address}
                   />
                 );
               })}
@@ -66,7 +68,7 @@ const Tables=()=> {
         {/* </VStack> */}
       {/* </Center> */}
     </Card>
-    <Card p={10} borderWidth='1px' borderRadius='lg'  my="22px" 
+    {/* <Card p={10} borderWidth='1px' borderRadius='lg'  
       overflowX={{ sm: "scroll", xl: "hidden" }}
     >
       <CardHeader p="6px 0px 22px 0px">
@@ -104,7 +106,7 @@ const Tables=()=> {
           </Tbody>
         </Table>
       </CardBody>
-    </Card>
+    </Card> */}
   </Flex>
   );
 }

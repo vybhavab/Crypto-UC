@@ -23,6 +23,10 @@ const NewNoteWorthy = () => {
                     <List spacing={3}>
                         <ListItem>
                             <ListIcon as={RiCheckboxBlankCircleLine} color='blue.500' />
+                            Modify Application UI for mobile
+                        </ListItem>
+                        <ListItem>
+                            <ListIcon as={RiCheckboxBlankCircleLine} color='blue.500' />
                             Shift Cardano node instances from local machine to the cloud. 
                         </ListItem>
                         <ListItem>
@@ -41,7 +45,7 @@ const NewNoteWorthy = () => {
                         <ListItem>
                             <ListIcon as={RiCheckboxBlankCircleLine} color='blue.500' />
                             Identifying Business/Department accounts to then visualize department spending for public accounts to view in dashboard
-                            </ListItem>
+                        </ListItem>
                     </List>
                 </Box>
             </VStack>

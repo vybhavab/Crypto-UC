@@ -1,27 +1,29 @@
 import React, { useState, useEffect } from "react";
-import { BarChart, CartesianGrid, XAxis, YAxis, Bar} from 'recharts';
+import { BarChart, CartesianGrid, XAxis, YAxis, Bar, ResponsiveContainer} from 'recharts';
 
 const ChartTest= (props:any) =>{
   const data = [
     { 
       time: "Sep",
-      users: 1,
+      users: 58,
     },
     {
       time: "Oct",
-      users: 3,
+      users: 300,
     },{
       time: "Nov",
-      users: 7,
+      users: 500,
     }
   ]
   return(
-    <BarChart width={600} height={350} data={data}>
-      {/* <CartesianGrid strokeDasharray="3 3" /> */}
-      <XAxis dataKey="time" />
-      <YAxis />
-      <Bar label={true} dataKey="users" fill={props.colorFill} />
-    </BarChart>
+    <ResponsiveContainer width="100%" height={200}>
+      <BarChart width={600} height={350} data={data}>
+        {/* <CartesianGrid strokeDasharray="3 3" /> */}
+        <XAxis dataKey="time" />
+        <YAxis />
+        <Bar label={true} dataKey="users" fill={props.colorFill} />
+      </BarChart>
+    </ResponsiveContainer>
   )
 }
 
