@@ -2,7 +2,6 @@ import { Flex, Icon, Text, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
 import Card from './Card';
 import CardHeader from './CardHeader';
-import {BiWallet} from "react-icons/bi";
 import CardBody from './CardBody';
 import { newestTransactions, olderTransactions } from 'variables/general';
 import TransactionRow from 'components/Tables/TransactionRow';

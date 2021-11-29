@@ -1,8 +1,5 @@
-// src/components/area.rechart.js
-
-import { Box } from "@chakra-ui/react";
 import React from "react";
-import { AreaChart, Area, YAxis, XAxis, CartesianGrid, Tooltip, Legend,ResponsiveContainer } from 'recharts';
+import { AreaChart, Area, YAxis, XAxis, Tooltip, Legend,ResponsiveContainer } from 'recharts';
 
 const AreaRechart=()=> {
 

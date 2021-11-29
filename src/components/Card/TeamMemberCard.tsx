@@ -9,9 +9,7 @@ import {
     Image,
     Flex,
     Avatar,
-    Button,
     HStack,
-    IconButton,
     Link,
     Icon,
   } from '@chakra-ui/react';

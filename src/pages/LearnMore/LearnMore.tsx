@@ -4,14 +4,8 @@ import {
     Heading,
     VStack,
     Grid,
-    Flex,
-    Center,
-    Icon,
     Text,
-    List,
-    ListItem
   } from "@chakra-ui/react";
-import { RiCheckboxBlankCircleLine } from "react-icons/ri";
 
 const LearnMore = () => {
     return (

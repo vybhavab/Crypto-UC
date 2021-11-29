@@ -1,4 +1,4 @@
-import { Box, Grid, Heading, VStack } from "@chakra-ui/react";
+import { Grid, Heading, VStack } from "@chakra-ui/react";
 import React from "react";
 
 const Market = () => {

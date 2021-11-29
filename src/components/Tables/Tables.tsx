@@ -1,7 +1,6 @@
 import React from "react";
 // Chakra imports
 import {
-  Center,
   Flex,
   Table,
   Tbody,
@@ -9,13 +8,12 @@ import {
   Th,
   Thead,
   Tr,
-  useColorModeValue,
-  VStack,
+  useColorModeValue
 } from "@chakra-ui/react";
 // Custom components
-import TablesProjectRow from "components/Tables/TablesProjectRow";
+
 import TablesTableRow from "components/Tables/TablesTableRow";
-import { tablesProjectData, tablesTableData } from "variables/general";
+import {  tablesTableData } from "variables/general";
 import Card from "components/Card/Card";
 import CardHeader from "components/Card/CardHeader";
 import CardBody from "components/Card/CardBody";

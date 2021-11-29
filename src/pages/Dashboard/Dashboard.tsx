@@ -1,28 +1,11 @@
 import React from "react";
 import {
     Box,
-    Heading,
-    VStack,
-    Grid,
     Flex,
-    Stat,
-    StatLabel,
-    StatNumber,
-    StatHelpText,
-    HStack,
     useColorModeValue,
-    Table,
-    Tbody,
-    Thead,
-    Th,
-    Tr,
     Text,
-    SimpleGrid,
-    Icon,
-    Progress,
-    Center
+    SimpleGrid
 } from "@chakra-ui/react";
-import Blockfrost from "middleware/blockfrost";
 import ChartTest from "components/Charts/ChartTest";
 import CardBody from "components/Card/CardBody";
 import Card from "components/Card/Card";

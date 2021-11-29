@@ -15,7 +15,7 @@ const LoginGoogle = () => {
     const res = response as GoogleLoginResponse;
     let email = res.profileObj.email
     email = email.split("@")[1]
-    if (email != "ucdavis.edu")
+    if (email !== "ucdavis.edu")
     {
       alert('Not a UC Davis Email Habibi');
       return false;

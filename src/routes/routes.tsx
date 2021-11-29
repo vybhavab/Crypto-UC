@@ -1,5 +1,5 @@
 // // import
-import React, {useContext}from "react";
+import React from "react";
 import Home from "pages/Home/Home";
 import Sidebar from "components/Sidebar/Sidebar";
 import LearnMore from "pages/LearnMore/LearnMore";

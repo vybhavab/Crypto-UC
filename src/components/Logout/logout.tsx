@@ -1,4 +1,4 @@
-import { Box, Center, Text } from '@chakra-ui/react';
+import { Box, Center} from '@chakra-ui/react';
 import React, {useContext}from 'react';
 import { useGoogleLogout } from 'react-google-login';
 import { LoginContext } from 'contexts/LoginContext';
