@@ -28,9 +28,8 @@ const FirebaseUser = () => {
                 campus_id:loginObj.campus_id,
                 account_type:loginObj.account_type
             }
+            console.log("!!!!!!!!!!!!",userObj)
             setData(`users/${loginObj.googleId}`,userObj);
-            set(ref(db, `users/${loginObj.googleId}`), {
-            });
             getUserData(loginObj.googleId);
         }
     };

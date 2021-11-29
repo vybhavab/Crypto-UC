@@ -21,8 +21,8 @@ import {
   FiChevronDown,
 } from 'react-icons/fi';
 import { GiTwoCoins } from 'react-icons/gi';
-import { BiBook } from 'react-icons/bi';
-import { FaUserFriends } from 'react-icons/fa'
+import { BiBook, BiWallet } from 'react-icons/bi';
+import { FaUserFriends, FaWallet } from 'react-icons/fa'
 import { IconType } from 'react-icons';
 import { ReactText } from 'react';
 import { useDisclosure } from "@chakra-ui/react";
@@ -33,12 +33,10 @@ interface LinkItemProps {
   path: string;
 }
 const LinkItems: Array<LinkItemProps> = [
-  { name: 'Assets', icon: GiTwoCoins, path:'/assets' },
-  { name: 'Crypto Market', icon: FiTrendingUp, path:'/market' },
-  { name: 'Pay', icon: FiCompass ,path:'/pay'},
-  { name: 'Learn to Earn', icon: BiBook,path:'/learntoearn' },
-  { name: 'Notifications', icon: FiSettings,path:'/notifications' },
-  { name: 'Invite Others', icon: FaUserFriends,path:'/invite' },
+  { name: 'Portfolio', icon: BiWallet, path:'/portfolio' },
+  { name: 'Send or Receive', icon: GiTwoCoins ,path:'/pay'},
+  { name: 'Market', icon: FiTrendingUp, path:'/market' },
+  { name: 'Invite Friends', icon: FaUserFriends,path:'/invite' }
 ];
 
 const Sidebar = ({

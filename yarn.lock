@@ -11825,6 +11825,13 @@ react-scripts@^3.4.4:
   optionalDependencies:
     fsevents "2.1.2"
 
+react-social-icons@^5.6.1:
+  version "5.6.1"
+  resolved "https://registry.yarnpkg.com/react-social-icons/-/react-social-icons-5.6.1.tgz#e185311536370b5afb152664692f1e41b7079251"
+  integrity sha512-gQJgBBn0GnV+e+IiZecTfuH2OPGV22G1yWD/ieCUhkHxJWZF2DhRtkTpOpe5+Ao+uWkOf3/jO2u2MjYdTEWFdA==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-style-singleton@^2.1.0:
   version "2.1.1"
   resolved "https://registry.npmjs.org/react-style-singleton/-/react-style-singleton-2.1.1.tgz"

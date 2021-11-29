@@ -12,8 +12,15 @@ const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 const LoginGoogle = () => {
   const { setLoggedIn, setLoginObj,loginObj } = useContext(LoginContext);
   const onLoginSuccess = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
-    setLoggedIn(true);
     const res = response as GoogleLoginResponse;
+    let email = res.profileObj.email
+    email = email.split("@")[1]
+    if (email != "ucdavis.edu")
+    {
+      alert('Not a UC Davis Email Habibi');
+      return false;
+    }
+    setLoggedIn(true);
     setLoginObj({...loginObj,
       googleId: res.googleId,
       name: res.profileObj.name,
@@ -23,6 +30,7 @@ const LoginGoogle = () => {
       campus_id: "Davis",
       account_type: "Student"
     });
+    
     console.log(res.profileObj);
     //TODO: refresh token
   }
