@@ -26,11 +26,13 @@ import Blockfrost from "middleware/blockfrost";
 import ChartTest from "components/Charts/ChartTest";
 import CardBody from "components/Card/CardBody";
 import Card from "components/Card/Card";
-import {BiWallet} from "react-icons/bi";
+import {BiCube, BiWallet} from "react-icons/bi";
 import DashboardCardSmall from "components/Card/DashboardCardSmall";
 import {BsGlobe} from "react-icons/bs";
 import DashboardUsersCard from "components/Card/DashboardUsersCard";
 import DashboardTransactions from "components/Card/DashboardTransactions";
+import { FaUsers } from "react-icons/fa";
+import { GiClick, GiMoneyStack } from "react-icons/gi";
 
 const Dashboard = () => {
     return (
@@ -39,11 +41,11 @@ const Dashboard = () => {
             <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing="20px" >
                 <DashboardCardSmall title={"Today's Money"} amount={"$53,000"} percentage={"+55%"} icon={BiWallet} colorVal={"green.400"}/>
                 <DashboardCardSmall title={"Today's Users"} amount={'2,300'} percentage={"+5%"} icon={BsGlobe} colorVal={"green.400"}/>
-                <DashboardCardSmall title={"Today's Clients"} amount={'+3,020'} percentage={"-14%"} icon={BiWallet} colorVal={"red.600"}/>
-                <DashboardCardSmall title={"Total Sales"} amount={'$173,000'} percentage={"+8%"} icon={BiWallet} colorVal={"green.400"}/>
+                <DashboardCardSmall title={"Today's Clients"} amount={'+3,020'} percentage={"-14%"} icon={FaUsers} colorVal={"red.600"}/>
+                <DashboardCardSmall title={"Total Sales"} amount={'$173,000'} percentage={"+8%"} icon={GiMoneyStack} colorVal={"green.400"}/>
             </SimpleGrid>
             <SimpleGrid columns={{ sm: 1, md: 2, xl: 2 }}  pt={{ base: "60px", md: "75px" }}>
-                <Card minHeight="350px">
+                <Card minHeight="300px">
                     <CardBody borderWidth="1px" borderRadius="15px" bg={useColorModeValue('white','gray.700')} width="100%">
                         <Box  p="10px">
                         <ChartTest colorFill={"#ADD8E6"} />
@@ -71,11 +73,11 @@ const Dashboard = () => {
                             than last week
                             </Text>
                         </Flex>
-                        <SimpleGrid columns={{ sm: 1, md: 4, xl: 4 } } spacing="10px" p={3}>
-                         <DashboardUsersCard title={"Users"} amount={"32,984"}/>
-                         <DashboardUsersCard title={"Clicks"} amount={"2.42m"}/>
-                         <DashboardUsersCard title={"Sales"} amount={"$24,00"}/>
-                         <DashboardUsersCard title={"Items"} amount={"320"} />
+                        <SimpleGrid columns={{ sm: 1, md: 4, xl: 4 } } spacing="10px" pl={3}  pr={3}  pb={3}>
+                         <DashboardUsersCard title={"Users"} amount={"32,984"} icon={BsGlobe}/>
+                         <DashboardUsersCard title={"Clicks"} amount={"2.42m"} icon={GiClick}/>
+                         <DashboardUsersCard title={"Sales"} amount={"$24,00"} icon={GiMoneyStack}/>
+                         <DashboardUsersCard title={"Items"} amount={"320"}  icon={BiCube}/>
                         </SimpleGrid>
 
                         
