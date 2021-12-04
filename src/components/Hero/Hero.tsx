@@ -55,6 +55,32 @@ export default function CallToActionWithAnnotation() {
             </Link>
             </VStack>
           </Stack>
+          <Stack>
+            <Box as={'span'} color={'gray.500'}>
+              <Text>
+              <Heading
+              fontWeight={600}
+              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
+              lineHeight={'110%'}>
+                Cardano and BlockFrost <br />
+                <Text as={'span'} color={'#00B2E3'}>
+              Built In
+                </Text>
+              </Heading>
+              <Box></Box>
+              <Text
+              fontWeight={400}
+              fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}>
+              A Decentralized Platform for Everyone{"\n"}          
+              </Text>
+              <Text fontSize='xl'>
+              BlockFrost is a decentralized platform for anyone to create, manage, and transact on the blockchain.
+              </Text>
+              </Text>
+              </Box>     
+          </Stack>
+
+
       </Container>
     </>
   );
