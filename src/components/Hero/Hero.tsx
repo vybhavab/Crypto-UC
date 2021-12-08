@@ -8,6 +8,7 @@ import {
   Text,
   Button,
   Stack,
+  VStack,
 } from '@chakra-ui/react';
 import {Link} from 'react-router-dom';
 
@@ -25,7 +26,7 @@ export default function CallToActionWithAnnotation() {
         <Stack
           as={Box}
           textAlign={'center'}
-          spacing={{ base: 8, md: 14 }}
+          spacing={{ base: 8, md: 14}}
           py={{ base: 20, md: 36 }}>
           <Heading
             fontWeight={600}
@@ -36,15 +37,10 @@ export default function CallToActionWithAnnotation() {
               Secured By Blockchain Technology
             </Text>
           </Heading>
-          <Text color={'gray.500'}>
-            The Next Generation of Payments for the UC System
-          </Text>
-          <Stack
-            direction={'column'}
-            spacing={3}
-            align={'center'}
-            alignSelf={'center'}
-            position={'relative'}>
+          <VStack>
+            <Text color={'gray.500'}>
+              The Next Generation of Payments for the UC System
+            </Text>
             <Link to="/learnmore">
               <Button
                 colorScheme={'green'}
@@ -57,34 +53,8 @@ export default function CallToActionWithAnnotation() {
                 <Text>Learn more </Text>
               </Button>
             </Link>
-            </Stack>
+            </VStack>
           </Stack>
-          <Stack>
-            <Box as={'span'} color={'gray.500'}>
-              <Text>
-              <Heading
-              fontWeight={600}
-              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-              lineHeight={'110%'}>
-                Cardano and BlockFrost <br />
-                <Text as={'span'} color={'#00B2E3'}>
-              Built In
-                </Text>
-              </Heading>
-              <Box></Box>
-              <Text
-              fontWeight={400}
-              fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}>
-              A Decentralized Platform for Everyone{"\n"}          
-              </Text>
-              <Text fontSize='xl'>
-              BlockFrost is a decentralized platform for anyone to create, manage, and transact on the blockchain.
-              </Text>
-              </Text>
-              </Box>     
-          </Stack>
-
-
       </Container>
     </>
   );
