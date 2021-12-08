@@ -11,8 +11,10 @@ import {
   useColorModeValue,
   VStack,
   WrapItem,
-  Wrap,
+  Wrap
 } from "@chakra-ui/react"
+
+import StudentFacultyCard from "./StudentFacultyCard";
 
 import TechnologyCard from "./TechnologyCard";
 import reactLogo from "assets/logos/react.png";
@@ -34,7 +36,7 @@ const Hero = (props:any) => {
       justify={{ base: "center", md: "space-around"}}
       direction={{ base: "column-reverse", md: "row" }}
     //   wrap="no-wrap"
-      minH="70vh"
+      minH="50vh"
       px={8}
       mb={{ base:16, md: 8, sm:2}}
       {...props}
@@ -44,7 +46,7 @@ const Hero = (props:any) => {
           as={Box}
           textAlign={'left'}
           spacing={{ base: 8, md: 14,sm:4}}
-          py={{ base: 20, md: 36 }}>
+          py={{ base: 20, sm: 15, md: 20, lg: 36 }}>
           <Heading
             fontWeight={600}
             as="h1"
@@ -56,7 +58,7 @@ const Hero = (props:any) => {
             Secured By Cardano
             </Text>
           </Heading>
-          <VStack alignItems={{base:'center',sm:'center' ,md:'center', lg:'flex-start'}}>
+          <VStack alignItems={{base:'center',sm:'center' ,md:'flex-start', lg:'flex-start'}}>
           <Heading
                 as="h3"
                 size="md"
@@ -93,9 +95,9 @@ const Hero = (props:any) => {
       direction={{ base: "column-reverse", md: "row" }}
       spacing={1}
     //   wrap="no-wrap"
-      minH="70vh"
+      // minH="40vh"
       px={8}
-      mb={{ base:16, md: 8, sm:2}}
+      mb={{ base:"20vh", md:"10vh", sm:"5vh"}}
       {...props}
     >
       <Wrap  spacing="50px">
@@ -118,23 +120,14 @@ const Hero = (props:any) => {
     </Flex>
     <Flex
       align="center"
-      justify={{ base: "center", md: "space-around"}}
+      justify={{ base: "center"}}
       direction={{ base: "column-reverse", md: "row" }}
-    //   wrap="no-wrap"
       minH="70vh"
-      px={8}
-      mb={{ base:16, md: 8, sm:2}}
       {...props}
     >
-
-      <Box as={Button} w={{ base: "60%", sm: "60%", md: "50%" ,lg:"40%"}} mb={{ base: 12, md: 0 }}  h={"400px"} boxShadow='dark-lg' rounded="2rem">
-        Invest
-        <Image src={props.image}   size={"100%"} pt={7} pb={7} pl={12} pr={12} rounded="1rem" shadow="2xl" bg={useColorModeValue('gray.900', 'gray.900')} />
-      </Box>
-      <Box as={Button} w={{ base: "60%", sm: "60%", md: "50%" ,lg:"40%"}} mb={{ base: 12, md: 0 }}  h={"400px"} boxShadow='dark-lg'>
-        Learn
-        <Image src={props.image}   size={"100%"} pt={7} pb={7} pl={12} pr={12} rounded="1rem" shadow="2xl" bg={useColorModeValue('gray.900', 'gray.900')} />
-      </Box>
+      <StudentFacultyCard position={"For Departments and Faculty"}/>
+      <Box w="3vw"/>
+      <StudentFacultyCard position={"For Students"}/>
       
     </Flex>
     </>
