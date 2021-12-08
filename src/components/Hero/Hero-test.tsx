@@ -19,7 +19,12 @@ import reactLogo from "assets/logos/react.png";
 import cardanoLogo from "assets/logos/cardano-ada.png";
 import firebaseLogo from "assets/logos/Firebase/vertical_light.png";
 import blockfrostLogo from "assets/logos/blockfrost.png";
-import googleLogo from "assets/logos/google.png"
+import googleLogo from "assets/logos/google.png";
+import reactGrayLogo from "assets/logos/react_gray.png";
+import cardanoGrayLogo from "assets/logos/cardano-ada_gray.png";
+import firebaseGrayLogo from "assets/logos/Firebase/vertical_light_gray.png";
+import blockfrostGrayLogo from "assets/logos/blockfrost_gray.png";
+import googleGrayLogo from "assets/logos/google_gray.png";
 
 const Hero = (props:any) => {
   return (
@@ -95,19 +100,19 @@ const Hero = (props:any) => {
     >
       <Wrap  spacing="50px">
         <WrapItem>
-          <TechnologyCard logo={reactLogo}/>
+          <TechnologyCard logo={reactLogo} logoGray={reactGrayLogo}/>
         </WrapItem>
         <WrapItem>
-          <TechnologyCard logo={cardanoLogo}/>
+          <TechnologyCard logo={cardanoLogo} logoGray={cardanoGrayLogo}/>
         </WrapItem>
         <WrapItem>
-          <TechnologyCard logo={blockfrostLogo}/>
+          <TechnologyCard logo={blockfrostLogo} logoGray={blockfrostGrayLogo}/>
         </WrapItem>
         <WrapItem>
-          <TechnologyCard logo={firebaseLogo}/>
+          <TechnologyCard logo={firebaseLogo} logoGray={firebaseGrayLogo}/>
         </WrapItem>
         <WrapItem>
-          <TechnologyCard logo={googleLogo}/>
+          <TechnologyCard logo={googleLogo} logoGray={googleGrayLogo}/>
         </WrapItem>
       </Wrap>
     </Flex>
