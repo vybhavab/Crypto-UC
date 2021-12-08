@@ -14,8 +14,7 @@ const Home = () => {
           <Box textAlign="center" fontSize="xl">
               <Grid minH="100vh" p={3}>  
                 {/* <Hero/> */}
-                <Hero title={"Secured By Blockchain Technology"}
-                  subtitle= { "The Next Generation of Payments for the UC System"}
+                <Hero 
                   image= { cardanoImg }
                   ctaText= { "Create your account now"}
                   ctaLink= { "/signup"}/>
