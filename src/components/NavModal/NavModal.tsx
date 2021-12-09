@@ -24,10 +24,12 @@ import { FiChevronDown } from "react-icons/fi";
 import Logout from "components/Logout/logout";
 import LoginGoogle from "components/LoginGoogle/LoginGoogle";
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
+import { CardanoContext } from "contexts/CardanoContext";
 
 const NavModal = () => {
   const { loggedIn, loginObj } = useContext(LoginContext);
-
+  const { balance } = useContext(CardanoContext);
+  console.log(balance)
   return (
     <div>
       <HStack spacing={{ base: '0', md: '6' }}>
@@ -99,7 +101,7 @@ const NavModal = () => {
 
                     <Stack direction={'row'} justify={'center'} spacing={6}>
                       <Stack spacing={0} align={'center'}>
-                        <Text fontWeight={600}>40.762</Text>
+                        <Text fontWeight={600}>{balance}</Text>
                         <Text fontSize={'sm'} color={'gray.500'}>
                           Balance
                         </Text>

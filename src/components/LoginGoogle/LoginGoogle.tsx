@@ -3,6 +3,7 @@ import {GoogleLoginResponse, GoogleLoginResponseOffline, useGoogleLogin} from 'r
 import { FcGoogle } from 'react-icons/fc'
 import { Button, Center, Text } from "@chakra-ui/react";
 import { LoginContext } from "contexts/LoginContext";
+import { getUserData, hasUserData, setData } from "utils/firebase";
 
 // TODO: Refresh token
 
@@ -10,8 +11,9 @@ import { LoginContext } from "contexts/LoginContext";
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 
 const LoginGoogle = () => {
-  const { setLoggedIn, setLoginObj,loginObj } = useContext(LoginContext);
-  const onLoginSuccess = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
+  const { loggedIn, setLoggedIn, setLoginObj,loginObj } = useContext(LoginContext);
+
+  const onLoginSuccess = async (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
     const res = response as GoogleLoginResponse;
     let email = res.profileObj.email
     email = email.split("@")[1]
@@ -20,25 +22,55 @@ const LoginGoogle = () => {
       alert('Not a UC Davis Email Habibi');
       return false;
     }
-    setLoggedIn(true);
-    setLoginObj({...loginObj,
-      googleId: res.googleId,
-      name: res.profileObj.name,
-      email: res.profileObj.email,
-      imageUrl: res.profileObj.imageUrl,
-      cardano_acct_addr: "test123",
-      campus_id: "Davis",
-      account_type: "Student"
-    });
-    
-    console.log(res.profileObj);
-    //TODO: refresh token
+    if(!loggedIn){
+      console.log("loggedIn")
+      const hasData = await hasUserData(res.googleId);
+      if(hasData){
+        console.log("hasUserData")
+        const data = await getUserData(res.googleId);
+        console.log(data);
+        setLoginObj({...loginObj,
+          googleId: res.googleId,
+          name: res.profileObj.name,
+          email: res.profileObj.email,
+          imageUrl: res.profileObj.imageUrl,
+          cardano_acct_addr: data!.cardano_acct_addr,
+          campus_id: data!.campus_id,
+          account_type: data!.account_type
+        });
+      }else{
+        console.log("no hablo userdata")
+        const obj = {
+          googleId: res.googleId,
+          name: res.profileObj.name,
+          email: res.profileObj.email,
+          imageUrl: res.profileObj.imageUrl,
+          cardano_acct_addr: "",
+          campus_id: "Davis",
+          account_type: "Student"
+        }
+        setLoginObj({
+          ...loginObj,
+          ...obj,
+        });
+        console.log(loginObj, obj);
+        setData(res.googleId, obj);
+      }
+      setLoggedIn(true);
+    }
   }
 
   const onLoginFailure = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
+    setLoginObj({...loginObj,
+        googleId: "",
+        name: "",
+        email: "",
+        imageUrl: "",
+        cardano_acct_addr: "",
+        campus_id: "",
+        account_type: ""
+    });
     setLoggedIn(false);
-    console.log(response);
-    //TODO: push to failure
   }
 
   const { signIn } = useGoogleLogin(

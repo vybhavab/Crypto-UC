@@ -36,7 +36,7 @@ const DashboardCardSmall = (props:any) => {
                     </Stat>
                     <Box bg={'#00b2e3'}  p={3}  rounded='15px' >
                         <Center>
-                            <Icon as={props.icon} color={useColorModeValue('white', 'white')} w={6} h={6}/> 
+                            <Icon as={props.icon} color={useColorModeValue('white', 'white')} w={6} h={6}/>
                         </Center>
                     </Box>
                     </Flex>

@@ -1,8 +1,10 @@
 import React,  { useState }  from 'react';
 import AppRoutes from 'routes/routes';
 import {LoginContext} from "contexts/LoginContext";
+import { User } from 'types/firebase.types';
+import { CardanoContext } from 'contexts/CardanoContext';
 
-let login_obj={
+let login_obj: User = {
   googleId: "" ,
   name:"",
   email:"",
@@ -15,12 +17,26 @@ let login_obj={
 const App = () => {
     const [isSignedIn, setSignIn] = useState(false);
     const [loginObj, setLoginObj] = useState(login_obj);
-    
+    const [balance, setBalance] = useState(0);
+    const [address, setAddress] = useState("");
+    const [transactions, setTransactions] = useState<string[]>([]);
+
     return (
       <LoginContext.Provider value={{loggedIn: isSignedIn, setLoggedIn: setSignIn,loginObj:loginObj,setLoginObj:setLoginObj}}>
-        
-        <AppRoutes loggedIn={isSignedIn}/>
-          
+        <CardanoContext.Provider
+          value={
+            {
+              balance: balance,
+              address: address,
+              transactions: transactions,
+              setAddress: setAddress,
+              setBalance: setBalance,
+              setTransactions: setTransactions
+            }
+          }>
+
+          <AppRoutes loggedIn={isSignedIn}/>
+        </CardanoContext.Provider>
       </LoginContext.Provider>
     )
 }

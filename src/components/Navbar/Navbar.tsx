@@ -28,10 +28,10 @@ import NavModal from "components/NavModal/NavModal";
 
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
-  
+
   return (
     <Box >
-      <Flex  as="nav"
+      <Flex as="nav"
         bg={useColorModeValue('white', 'gray.800')}
         color={useColorModeValue('gray.600', 'white')}
         minH={'60px'}

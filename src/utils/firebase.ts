@@ -1,24 +1,35 @@
-import { ref, child, get, set } from "firebase/database";
+import { ref, get, set } from "firebase/database";
 import { database } from "initFirebase";
+import { User } from "types/firebase.types";
 
-const getUserData = (googleId:string) : boolean => {
-    get(child(ref(database), `users/${googleId}`)).then((snapshot) => {
+const hasUserData = async (googleId:string) : Promise<boolean> => {
+    return await get(ref(database,`users/${googleId}`)).then((snapshot) => {
         if (snapshot.exists()) {
-        console.log("GET ",snapshot.val());
-        return true;
+          return true;
         } else {
-        console.log("No data available");
-        return false;
+          return false;
         }
     }).catch((error) => {
         console.error(error);
         return false;
     });
-    return false;
 }
 
 const setData = (googleId: string, value: unknown) => {
     set(ref(database, `users/${googleId}`), value);
 }
 
-export { getUserData, setData }
+const getUserData = async (googleId: string): Promise<User | undefined>=> {
+  return get(ref(database, `users/${googleId}`)).then((snapshot) => {
+    if (snapshot.exists()){
+      return snapshot.exportVal() as User;
+    }else{
+      return undefined
+    }
+  }).catch((err) => {
+    console.error(err);
+    return undefined;
+  });
+}
+
+export { hasUserData, setData, getUserData }
