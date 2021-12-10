@@ -1,5 +1,5 @@
 import { createContext } from "react";
-import { CardanoObj } from "types/cardano.types";
+import { CardanoObj, Transaction } from "types/cardano.types";
 
 const CardanoContext = createContext<CardanoObj>({
   address: "",
@@ -7,7 +7,7 @@ const CardanoContext = createContext<CardanoObj>({
   balance: 0,
   setBalance: (_balance: number) => {},
   transactions: [],
-  setTransactions: (_transactions: string[]) => {},
+  setTransactions: (_transactions: Transaction[]) => {},
 });
 
 export {CardanoContext};

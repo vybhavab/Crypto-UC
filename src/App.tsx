@@ -3,6 +3,7 @@ import AppRoutes from 'routes/routes';
 import {LoginContext} from "contexts/LoginContext";
 import { User } from 'types/firebase.types';
 import { CardanoContext } from 'contexts/CardanoContext';
+import { Transaction } from 'types/cardano.types';
 
 let login_obj: User = {
   googleId: "" ,
@@ -19,7 +20,7 @@ const App = () => {
     const [loginObj, setLoginObj] = useState(login_obj);
     const [balance, setBalance] = useState(0);
     const [address, setAddress] = useState("");
-    const [transactions, setTransactions] = useState<string[]>([]);
+    const [transactions, setTransactions] = useState<Transaction[]>([]);
 
     return (
       <LoginContext.Provider value={{loggedIn: isSignedIn, setLoggedIn: setSignIn,loginObj:loginObj,setLoginObj:setLoginObj}}>

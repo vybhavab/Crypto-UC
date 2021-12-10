@@ -16,7 +16,6 @@ import DashboardUsersCard from "components/Card/DashboardUsersCard";
 import DashboardTransactions from "components/Card/DashboardTransactions";
 import { FaUsers } from "react-icons/fa";
 import { GiClick, GiMoneyStack } from "react-icons/gi";
-import fetch from "isomorphic-unfetch";
 import { getUserData } from "utils/firebase";
 import { LoginContext } from "contexts/LoginContext";
 import { CardanoContext } from "contexts/CardanoContext";
@@ -24,7 +23,7 @@ import { CardanoContext } from "contexts/CardanoContext";
 const Dashboard = () => {
 
   const { loginObj } = useContext(LoginContext);
-  const { setBalance } = useContext(CardanoContext);
+  const { transactions } = useContext(CardanoContext);
 
   useEffect(() => {
     if(loginObj.googleId !== undefined){
@@ -32,12 +31,6 @@ const Dashboard = () => {
         if(user !== undefined){
           //const transactions = fetch(`${process.env.REACT_APP_CARDANO_WALLET_URL}/api/v0/address/getBalance/${res.cardano_acct_addr}`).then((res) => {console.log(res)});
           if(user.cardano_acct_addr !== undefined){
-            console.log(user.cardano_acct_addr);
-            fetch(`${process.env.REACT_APP_CARDANO_WALLET_URL}/api/v0/address/getBalance/${user.cardano_acct_addr}`)
-            .then((res) => res.json())
-            .then((data) => {
-                setBalance(data.totalBalance)
-            });
           }
         }
       }).catch((err) => {

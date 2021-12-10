@@ -26,6 +26,9 @@ import {
 
 import NavModal from "components/NavModal/NavModal";
 
+import { NAV_ITEMS } from "./NavItems";
+import { NavItem } from 'types/navbar.types';
+
 const Navbar = () => {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -71,8 +74,10 @@ const Navbar = () => {
         <Stack
           flex={{ base: 1, md: 0 }}
           justify={'flex-end'}
+          display={{ base: 'none', md: 'flex' }}
           direction={'row'}
-          spacing={6}>
+          spacing={6}
+        >
           <NavModal />
         </Stack>
       </Flex>
@@ -227,61 +232,5 @@ const MobileNavItem = ({ label, children, href }: NavItem) => {
     </Stack>
   );
 };
-
-interface NavItem {
-  label: string;
-  subLabel?: string;
-  children?: Array<NavItem>;
-  href?: string;
-}
-
-const NAV_ITEMS: Array<NavItem> = [
-  {
-    label: 'Dashboard',
-    href: '/dashboard',
-  },
-  {
-    label: 'Inspiration',
-    children: [
-      {
-        label: 'Explore Design Work',
-        subLabel: 'Trending Design to inspire you',
-        href: '/design',
-      },
-      {
-        label: 'Roadmap',
-        subLabel: 'Timeline and future goals',
-        href: '/roadmap',
-      },
-      {
-        label: 'New & Noteworthy',
-        subLabel: 'Up-and-coming Updates',
-        href: '/updates',
-      },
-      {
-        label: 'About Cardano',
-        subLabel: 'Technology Behind UCrypton',
-        href: 'https://www.cardano.org/',
-      }
-    ],
-  },
-  {
-    label: 'Team',
-    href: '/ourteam',
-  },
-  {
-    label: 'Presentation',
-    href: 'https://docs.google.com/presentation/d/1wBqMQupTYRNESIKb3ByYaKuLSBvJuIy1/edit?usp=sharing&ouid=110764831055152766777&rtpof=true&sd=true',
-  },
-  {
-    label: 'GitHub',
-    href: 'https://github.com/vybhavb/Crypto-UC'
-  },
-  {
-    label: 'Final Report',
-    href: 'https://docs.google.com/document/d/1Rc592iP5tPcz2bRh9pa86exjf6tn3Qk6N47SoM_pP0w/edit?usp=sharing',
-  }
-];
-
 
 export default Navbar;
