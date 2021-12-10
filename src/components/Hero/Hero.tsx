@@ -121,19 +121,19 @@ const Hero = (props:any) => {
     >
       <Wrap  spacing="50px">
         <WrapItem>
-          <TechnologyCard logo={reactLogo} logoGray={reactGrayLogo}/>
+          <TechnologyCard logo={reactLogo} logoGray={reactGrayLogo} weblink={"https://reactjs.org/"}/>
         </WrapItem>
         <WrapItem>
-          <TechnologyCard logo={cardanoLogo} logoGray={cardanoGrayLogo}/>
+          <TechnologyCard logo={cardanoLogo} logoGray={cardanoGrayLogo} weblink={"https://cardano.org/"}/>
         </WrapItem>
         <WrapItem>
-          <TechnologyCard logo={blockfrostLogo} logoGray={blockfrostGrayLogo}/>
+          <TechnologyCard logo={blockfrostLogo} logoGray={blockfrostGrayLogo} weblink={"https://blockfrost.io/"}/>
         </WrapItem>
         <WrapItem>
-          <TechnologyCard logo={firebaseLogo} logoGray={firebaseGrayLogo}/>
+          <TechnologyCard logo={firebaseLogo} logoGray={firebaseGrayLogo} weblink={"https://firebase.google.com/products/realtime-database"}/>
         </WrapItem>
         <WrapItem>
-          <TechnologyCard logo={googleLogo} logoGray={googleGrayLogo}/>
+          <TechnologyCard logo={googleLogo} logoGray={googleGrayLogo} weblink={"https://developers.google.com/identity/protocols/oauth2"}/>
         </WrapItem>
       </Wrap>
     </Flex>

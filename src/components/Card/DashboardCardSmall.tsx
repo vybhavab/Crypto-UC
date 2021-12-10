@@ -12,7 +12,7 @@ const DashboardCardSmall = (props:any) => {
                         <StatLabel
                         fontSize="sm"
                         color="gray.400"
-                        fontWeight="bold"
+                        // fontWeight="bold"
                         pb=".1rem"
                         >
                         {props.title}
