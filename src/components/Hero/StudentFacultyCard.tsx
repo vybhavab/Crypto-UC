@@ -1,40 +1,10 @@
 import React from 'react';
 import { useColorModeValue } from '@chakra-ui/system';
-import { Box, Button,Text, VStack,Image, Flex, Avatar, Stack, Heading, Center} from '@chakra-ui/react';
+import { Box, Button,Text, VStack,Image, Stack, Heading, Center} from '@chakra-ui/react';
 
 const StudentFacultyCard = (props:any) => {
     return(
-        // <Box as={Button} w={{ base: "60%", sm: "60%", md: "50%" ,lg:"40%"}}  backgroundImage="url('/assets/')"  h={"400px"}  rounded="2rem" borderWidth="1px" bg={useColorModeValue('white', 'gray.800')}_hover={{ borderWidth:"0px", bg:useColorModeValue('white', 'gray.700'), boxShadow:'dark-lg'}}>
-        //     {/* <VStack alignItems={{base:'center',sm:'center' ,md:'flex-start', lg:'flex-start'}}>
-        //         <Text
-        //             fontWeight={600}
-        //             fontSize="md"
-        //             textAlign={["center", "center", "left", "left"]}
-        //             lineHeight={'110%'} 
-        //             color={'#00B2E3'}>
-        //             {props.position}
-        //         </Text>
-           
-        //         <Text
-        //             fontSize="md"
-        //             fontWeight="normal"
-        //             color={'gray.500'}
-        //             lineHeight={1.5}
-        //             textAlign={["center", "center", "left", "left"]}
-        //         >
-        //         The Next Generation of Payments for the UC System
-        //         </Text>
-        //     </VStack> */}
-        //      <Center >
-        // <VStack>
-        // <Image
-        //   h={'120px'}
-        //   w={'full'}
-        //   src={
-        //     'https://images.unsplash.com/photo-1612865547334-09cb8cb455da?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80'
-        //   }
-        //   objectFit={'cover'}
-        // />
+
         <Center py={12}>
         
         <Box as={Button}

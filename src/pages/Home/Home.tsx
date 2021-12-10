@@ -6,16 +6,13 @@ import {
 
 
 // import Hero from 'components/Hero/Hero';
-import Hero from 'components/Hero/Hero-test';
+import Hero from 'components/Hero/Hero';
 
 const Home = () => {
     return (
           <Box textAlign="center" fontSize="xl">
               <Grid minH="100vh" p={3}>  
-                {/* <Hero/> */}
-                <Hero 
-                  ctaText= { "Create your account now"}
-                  ctaLink= { "/signup"}/>
+                <Hero />
               </Grid>
           </Box>
     );
