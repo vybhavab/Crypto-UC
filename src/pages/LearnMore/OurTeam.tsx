@@ -31,7 +31,7 @@ const OurTeam = () => {
                         <TeamMemberCard image={sai} name={"Sairamvinay V."} role={"Backend Developer"} email={"saivijay@ucdavis.edu"} imageSrc={jeju2} linkedIn={"https://www.linkedin.com/in/sairamvinay"} github={"https://github.com/Sairamvinay/"}></TeamMemberCard>
                     </HStack>
                     <Heading>
-                        <Heading size='md' pt='8' pb='8' color='gray.500'>Made with <span>❤️</span>  by Vybhav, Seongwoo, David, and Sai</Heading>
+                        <Heading size='md' pt='8' pb='8' color='gray.500'>Made with <span role="image">❤️</span>  by Vybhav, Seongwoo, David, and Sai</Heading>
                     </Heading>
                 </VStack>
             </Grid>
