@@ -9,6 +9,7 @@ import {
   Stack,
   Text,
   useColorModeValue,
+  Spacer,
   VStack,
   WrapItem,
   Wrap
@@ -18,6 +19,7 @@ import StudentFacultyCard from "./StudentFacultyCard";
 
 import TechnologyCard from "./TechnologyCard";
 import reactLogo from "assets/logos/react.png";
+import globeImage from "assets/img/globe.jpg";
 import cardanoLogo from "assets/logos/cardano-ada.png";
 import firebaseLogo from "assets/logos/Firebase/vertical_light.png";
 import blockfrostLogo from "assets/logos/blockfrost.png";
@@ -27,6 +29,9 @@ import cardanoGrayLogo from "assets/logos/cardano-ada_gray.png";
 import firebaseGrayLogo from "assets/logos/Firebase/vertical_light_gray.png";
 import blockfrostGrayLogo from "assets/logos/blockfrost_gray.png";
 import googleGrayLogo from "assets/logos/google_gray.png";
+import davisImage1 from "assets/img/davis1.png";
+import davisImage2 from "assets/img/davis2.png";
+import davisImage4 from "assets/img/davis4.jpg";
 
 const Hero = (props:any) => {
   return (
@@ -38,7 +43,8 @@ const Hero = (props:any) => {
     //   wrap="no-wrap"
       minH="50vh"
       px={8}
-      mb={{ base:16, md: 8, sm:2}}
+      mt={{ base:10, sm:10, md:1}}
+      mb={{ base:16, md: 8, sm:10}}
       {...props}
     >
 
@@ -84,14 +90,21 @@ const Hero = (props:any) => {
             </Link>
             </VStack>
       </Stack>
-      <Box w={{ base: "60%", sm: "60%", md: "50%" ,lg:"40%"}} mb={{ base: 12, md: 0 }} >
-        <Image src={props.image}   size={"100%"} pt={7} pb={7} pl={12} pr={12} rounded="1rem" shadow="2xl" bg={useColorModeValue('gray.900', 'gray.900')} />
-      </Box>
+      {/* <Box w={{ base: "60%", sm: "60%", md: "50%" ,lg:"40%"}} mb={{ base: 12, md: 0 }} > */}
+        {/* <Image src={davisImage2}   size={"100%"} pt={7} pb={7} pl={12} pr={12} rounded="1rem" shadow="2xl" bg={useColorModeValue('gray.900', 'gray.900')} /> */}
+        <Image
+              rounded={'lg'}
+              h={{ base: "60%", sm: "60%", md: "50%" ,lg:"60%"}}
+              w={{ base: "60%", sm: "60%", md: "50%" ,lg:"40%"}}
+              objectFit={'cover'}
+              src={globeImage}
+            />
+      {/* </Box> */}
       
     </Flex>
     <Flex
       align="center"
-      justify={{ base: "center", md: "space-around"}}
+      justify={{ base: "center", md: "space-around", lg:"center"}}
       direction={{ base: "column-reverse", md: "row" }}
       spacing={1}
     //   wrap="no-wrap"
@@ -118,17 +131,52 @@ const Hero = (props:any) => {
         </WrapItem>
       </Wrap>
     </Flex>
+
     <Flex
       align="center"
       justify={{ base: "center"}}
       direction={{ base: "column-reverse", md: "row" }}
-      minH="70vh"
+      minH="30vh"
       {...props}
     >
-      <StudentFacultyCard position={"For Departments and Faculty"}/>
+      <StudentFacultyCard position={"For Departments"}image={davisImage1}/>
       <Box w="3vw"/>
-      <StudentFacultyCard position={"For Students"}/>
+      <StudentFacultyCard position={"For Students"} image={davisImage4}/>
       
+    </Flex>
+
+    <Flex
+      align="center"
+      justify={{ base: "center", md: "space-around", lg:"center"}}
+      direction={{ base: "column", md: "row",xl:"column" }}
+    //   wrap="no-wrap"
+      minH="20vh"
+      px={8}
+      mb={{ base:16, md: 8, sm:2}}
+      {...props}
+    >
+     <Box w={500} maxW={1000} >
+      <Heading
+        fontWeight={600}
+        as="h1"
+        size="xl"
+        textAlign={["center", "center","center","left", "center"]}
+        lineHeight={'110%'}
+        mb={{ base:16, md: 8, sm:2}}>
+            UCrypto operates on a fast and scalable blockchain technology.
+      </Heading>
+      </Box>
+      <Spacer/>
+      <Box w={500} maxW={1000}>
+      <Heading
+        fontWeight={300}
+        as="h1"
+        size="md"
+        textAlign={["center", "center","center","left", "center"]}
+        lineHeight={'110%'}>
+        Cardano is a proof-of-stake blockchain platform which is the most environmentally sustainable blockchain protocol: the first to be founded on peer-reviewed research and developed through evidence-based methods. It combines pioneering technologies to provide unparalleled security and sustainability to decentralized applications, systems, and societies.
+      </Heading>
+      </Box>
     </Flex>
     </>
   )

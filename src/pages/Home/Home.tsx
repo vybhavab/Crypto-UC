@@ -7,7 +7,6 @@ import {
 
 // import Hero from 'components/Hero/Hero';
 import Hero from 'components/Hero/Hero-test';
-import cardanoImg from 'assets/img/cardano.png';
 
 const Home = () => {
     return (
@@ -15,7 +14,6 @@ const Home = () => {
               <Grid minH="100vh" p={3}>  
                 {/* <Hero/> */}
                 <Hero 
-                  image= { cardanoImg }
                   ctaText= { "Create your account now"}
                   ctaLink= { "/signup"}/>
               </Grid>
