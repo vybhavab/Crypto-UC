@@ -30,6 +30,9 @@ const OurTeam = () => {
                         <TeamMemberCard image={david_haddad} name={"David Haddad"} role={"Full Stack Developer"} email={"davhaddad@ucdavis.edu"} imageSrc={lebanon} linkedIn={"https://www.linkedin.com/in/davidhaddad7"} github={"https://github.com/davidhaddad7"}></TeamMemberCard>
                         <TeamMemberCard image={sai} name={"Sairamvinay V."} role={"Backend Developer"} email={"saivijay@ucdavis.edu"} imageSrc={jeju2} linkedIn={"https://www.linkedin.com/in/sairamvinay"} github={"https://github.com/Sairamvinay/"}></TeamMemberCard>
                     </HStack>
+                    <Heading>
+                        <Heading size='md' pt='8' pb='8' color='gray.500'>Made with <span>❤️</span>  by Vybhav, Seongwoo, David, and Sai</Heading>
+                    </Heading>
                 </VStack>
             </Grid>
         </Box>
