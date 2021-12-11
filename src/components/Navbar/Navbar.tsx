@@ -276,10 +276,6 @@ const NAV_ITEMS: Array<NavItem> = [
   {
     label: 'GitHub',
     href: 'https://github.com/vybhavb/Crypto-UC'
-  },
-  {
-    label: 'Final Report',
-    href: 'https://docs.google.com/document/d/1Rc592iP5tPcz2bRh9pa86exjf6tn3Qk6N47SoM_pP0w/edit?usp=sharing',
   }
 ];
 
