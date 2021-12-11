@@ -31,25 +31,25 @@ import googleGrayLogo from "assets/logos/google_gray.png";
 import davisImage1 from "assets/img/davis1.png";
 import davisImage4 from "assets/img/davis4.jpg";
 
-const Hero = (props:any) => {
+const Hero = (props: any) => {
   return (
     <>
-    <Flex
-      align="center"
-      justify={{ base: "center", md: "space-around"}}
-      direction={{ base: "column-reverse", md: "row" }}
-    //   wrap="no-wrap"
-      minH="50vh"
-      px={8}
-      mt={{ base:10, sm:10, md:1}}
-      mb={{ base:16, md: 8, sm:10}}
-      {...props}
-    >
+      <Flex
+        align="center"
+        justify={{ base: "center", md: "space-around" }}
+        direction={{ base: "column-reverse", md: "row" }}
+        //   wrap="no-wrap"
+        minH="50vh"
+        px={8}
+        mt={{ base: 10, sm: 10, md: 1 }}
+        mb={{ base: 16, md: 8, sm: 10 }}
+        {...props}
+      >
 
-     <Stack
+        <Stack
           as={Box}
           textAlign={'left'}
-          spacing={{ base: 8, md: 14,sm:4}}
+          spacing={{ base: 8, md: 14, sm: 4 }}
           py={{ base: 20, sm: 15, md: 20, lg: 36 }}>
           <Heading
             fontWeight={600}
@@ -59,22 +59,22 @@ const Hero = (props:any) => {
             lineHeight={'110%'}>
             Your Transactions <br />
             <Text as={'span'} color={'#00B2E3'}>
-            Secured By Cardano
+              Secured By Cardano
             </Text>
           </Heading>
-          <VStack alignItems={{base:'center',sm:'center' ,md:'flex-start', lg:'flex-start'}}>
-          <Heading
-                as="h3"
-                size="md"
-                fontWeight="normal"
-                color={'gray.500'}
-                lineHeight={1.5}
-                mb={4}
-                textAlign={["center", "center", "left", "left"]}
+          <VStack alignItems={{ base: 'center', sm: 'center', md: 'flex-start', lg: 'flex-start' }}>
+            <Heading
+              as="h3"
+              size="md"
+              fontWeight="normal"
+              color={'gray.500'}
+              lineHeight={1.5}
+              mb={4}
+              textAlign={["center", "center", "left", "left"]}
             >
-               The Next Generation of Payments for the UC System
+              The Next Generation of Payments for the UC System
             </Heading>
-    
+
             <Link to="/design">
               <Button
                 colorScheme={'green'}
@@ -87,135 +87,104 @@ const Hero = (props:any) => {
                 <Text>Final Report</Text>
               </Button>
             </Link>
-              <Button
-                colorScheme={'green'}
-                bg={'gray.500'}
-                rounded={'lg'}
-                px={6}
-                _hover={{
-                  bg: '#FFCC33',
-                }}
-                onClick={()=> window.location.href='https://youtu.be/TlkUZ_asRDk'}>
-                <Text>Watch Demo Video </Text>
-              </Button>
-            </VStack>
-<<<<<<< HEAD
-      </Stack>
-        <Image
+            <Button
+              colorScheme={'green'}
+              bg={'gray.500'}
               rounded={'lg'}
-              h={{ base: "60%", sm: "60%", md: "50%" ,lg:"60%"}}
-              w={{ base: "60%", sm: "60%", md: "50%" ,lg:"40%"}}
-              objectFit={'cover'}
-              src={globeImage}
-            />
+              px={6}
+              _hover={{
+                bg: '#FFCC33',
+              }}
+              onClick={() => window.location.href = 'https://youtu.be/TlkUZ_asRDk'}>
+              <Text>Watch Demo Video </Text>
+            </Button>
+          </VStack>
+        </Stack>
+        <Image
+          rounded={'lg'}
+          h={{ base: "60%", sm: "60%", md: "50%", lg: "60%" }}
+          w={{ base: "60%", sm: "60%", md: "50%", lg: "40%" }}
+          objectFit={'cover'}
+          src={globeImage}
+        />
 
-      
-    </Flex>
-    <Flex
-      align="center"
-      justify={{ base: "center", md: "space-around", lg:"center"}}
-      direction={{ base: "column-reverse", md: "row" }}
-      spacing={1}
 
-      px={8}
-      mb={{ base:"20vh", md:"10vh", sm:"5vh"}}
-      {...props}
-    >
-      <Wrap  spacing="50px">
-        <WrapItem>
-          <TechnologyCard logo={reactLogo} logoGray={reactGrayLogo} weblink={"https://reactjs.org/"}/>
-        </WrapItem>
-        <WrapItem>
-          <TechnologyCard logo={cardanoLogo} logoGray={cardanoGrayLogo} weblink={"https://cardano.org/"}/>
-        </WrapItem>
-        <WrapItem>
-          <TechnologyCard logo={blockfrostLogo} logoGray={blockfrostGrayLogo} weblink={"https://blockfrost.io/"}/>
-        </WrapItem>
-        <WrapItem>
-          <TechnologyCard logo={firebaseLogo} logoGray={firebaseGrayLogo} weblink={"https://firebase.google.com/products/realtime-database"}/>
-        </WrapItem>
-        <WrapItem>
-          <TechnologyCard logo={googleLogo} logoGray={googleGrayLogo} weblink={"https://developers.google.com/identity/protocols/oauth2"}/>
-        </WrapItem>
-      </Wrap>
-    </Flex>
+      </Flex>
+      <Flex
+        align="center"
+        justify={{ base: "center", md: "space-around", lg: "center" }}
+        direction={{ base: "column-reverse", md: "row" }}
+        spacing={1}
 
-    <Flex
-      align="center"
-      justify={{ base: "center"}}
-      direction={{ base: "column-reverse", md: "row" }}
-      minH="30vh"
-      {...props}
-    >
-      <StudentFacultyCard position={"For Departments"}image={davisImage1}/>
-      <Box w="3vw"/>
-      <StudentFacultyCard position={"For Students"} image={davisImage4}/>
-      
-    </Flex>
+        px={8}
+        mb={{ base: "20vh", md: "10vh", sm: "5vh" }}
+        {...props}
+      >
+        <Wrap spacing="50px">
+          <WrapItem>
+            <TechnologyCard logo={reactLogo} logoGray={reactGrayLogo} weblink={"https://reactjs.org/"} />
+          </WrapItem>
+          <WrapItem>
+            <TechnologyCard logo={cardanoLogo} logoGray={cardanoGrayLogo} weblink={"https://cardano.org/"} />
+          </WrapItem>
+          <WrapItem>
+            <TechnologyCard logo={blockfrostLogo} logoGray={blockfrostGrayLogo} weblink={"https://blockfrost.io/"} />
+          </WrapItem>
+          <WrapItem>
+            <TechnologyCard logo={firebaseLogo} logoGray={firebaseGrayLogo} weblink={"https://firebase.google.com/products/realtime-database"} />
+          </WrapItem>
+          <WrapItem>
+            <TechnologyCard logo={googleLogo} logoGray={googleGrayLogo} weblink={"https://developers.google.com/identity/protocols/oauth2"} />
+          </WrapItem>
+        </Wrap>
+      </Flex>
 
-    <Flex
-      align="center"
-      justify={{ base: "center", md: "space-around", lg:"center"}}
-      direction={{ base: "column", md: "row",xl:"column" }}
-    //   wrap="no-wrap"
-      minH="20vh"
-      px={8}
-      mb={{ base:16, md: 8, sm:2}}
-      {...props}
-    >
-     <Box w={500} maxW={1000} >
-      <Heading
-        fontWeight={600}
-        as="h1"
-        size="xl"
-        textAlign={["center", "center","center","left", "center"]}
-        lineHeight={'110%'}
-        mb={{ base:16, md: 8, sm:2}}>
+      <Flex
+        align="center"
+        justify={{ base: "center" }}
+        direction={{ base: "column-reverse", md: "row" }}
+        minH="30vh"
+        {...props}
+      >
+        <StudentFacultyCard position={"For Departments"} image={davisImage1} />
+        <Box w="3vw" />
+        <StudentFacultyCard position={"For Students"} image={davisImage4} />
+
+      </Flex>
+
+      <Flex
+        align="center"
+        justify={{ base: "center", md: "space-around", lg: "center" }}
+        direction={{ base: "column", md: "row", xl: "column" }}
+        //   wrap="no-wrap"
+        minH="20vh"
+        px={8}
+        mb={{ base: 16, md: 8, sm: 2 }}
+        {...props}
+      >
+        <Box w={500} maxW={1000} >
+          <Heading
+            fontWeight={600}
+            as="h1"
+            size="xl"
+            textAlign={["center", "center", "center", "left", "center"]}
+            lineHeight={'110%'}
+            mb={{ base: 16, md: 8, sm: 2 }}>
             UCrypton operates on a fast and scalable blockchain technology.
-      </Heading>
-      </Box>
-      <Spacer/>
-      <Box w={500} maxW={1000}>
-      <Heading
-        fontWeight={300}
-        as="h1"
-        size="md"
-        textAlign={["center", "center","center","left", "center"]}
-        lineHeight={'110%'}>
-        Cardano is a proof-of-stake blockchain platform which is the most environmentally sustainable blockchain protocol: the first to be founded on peer-reviewed research and developed through evidence-based methods. It combines pioneering technologies to provide unparalleled security and sustainability to decentralized applications, systems, and societies.
-      </Heading>
-      </Box>
-    </Flex>
-=======
-          </Stack>
-          <Stack>
-            <Box as={'span'} color={'gray.500'}>
-              <Text>
-              <Heading
-              fontWeight={600}
-              fontSize={{ base: '2xl', sm: '4xl', md: '6xl' }}
-              lineHeight={'110%'}>
-                Cardano and BlockFrost <br />
-                <Text as={'span'} color={'#00B2E3'}>
-              Built In
-                </Text>
-              </Heading>
-              <Box></Box>
-              <Text
-              fontWeight={400}
-              fontSize={{ base: 'xl', sm: '2xl', md: '3xl' }}>
-              A Decentralized Platform for Everyone{"\n"}          
-              </Text>
-              <Text fontSize='xl'>
-              BlockFrost is a decentralized platform for anyone to create, manage, and transact on the blockchain.
-              </Text>
-              </Text>
-              </Box>     
-          </Stack>
-
-
-      </Container>
->>>>>>> dev/cardano-transactions
+          </Heading>
+        </Box>
+        <Spacer />
+        <Box w={500} maxW={1000}>
+          <Heading
+            fontWeight={300}
+            as="h1"
+            size="md"
+            textAlign={["center", "center", "center", "left", "center"]}
+            lineHeight={'110%'}>
+            Cardano is a proof-of-stake blockchain platform which is the most environmentally sustainable blockchain protocol: the first to be founded on peer-reviewed research and developed through evidence-based methods. It combines pioneering technologies to provide unparalleled security and sustainability to decentralized applications, systems, and societies.
+          </Heading>
+        </Box>
+      </Flex>
     </>
   )
 }
