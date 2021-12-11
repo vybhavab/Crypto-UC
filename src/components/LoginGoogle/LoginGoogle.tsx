@@ -5,13 +5,14 @@ import { Button, Center, Text } from "@chakra-ui/react";
 import { LoginContext } from "contexts/LoginContext";
 import { getUserData, setData } from "utils/firebase";
 import { CardanoContext } from "contexts/CardanoContext";
+import { User } from "types/firebase.types";
 
 // TODO: Refresh token
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 
 const LoginGoogle = () => {
   const { loggedIn, setLoggedIn, setLoginObj,loginObj } = useContext(LoginContext);
-  const { setBalance, setAddress, setTransactions } = useContext(CardanoContext);
+  const { setBalance, setTransactions } = useContext(CardanoContext);
 
   const onLoginSuccess = async (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
 
@@ -29,11 +30,12 @@ const LoginGoogle = () => {
       return;
     }
 
-    let userObj = {
+    let userObj:User = {
       googleId: res.googleId,
       name: res.profileObj.name,
       email: res.profileObj.email,
       imageUrl: res.profileObj.imageUrl,
+      cardano_wallet_id: "",
       cardano_acct_addr: "",
       campus_id: "Davis",
       account_type: "Student"
@@ -52,22 +54,23 @@ const LoginGoogle = () => {
         name: res.profileObj.name,
         email: res.profileObj.email,
         imageUrl: res.profileObj.imageUrl,
+        cardano_wallet_id: firebaseUserData!.cardano_wallet_id,
         cardano_acct_addr: firebaseUserData!.cardano_acct_addr,
         campus_id: firebaseUserData!.campus_id,
         account_type: firebaseUserData!.account_type
       };
     }
 
-    setLoginObj(userObj);
-    if (userObj.cardano_acct_addr.length > 0) {
-      setWalletData(firebaseUserData!.cardano_acct_addr);
+    if(userObj.cardano_wallet_id.length > 0) {
+      setWalletData(userObj.cardano_wallet_id);
     }
+
+    setLoginObj(userObj);
     setLoggedIn(true);
   }
 
   const setWalletData = async (cardanoWalletAddress: string) => {
     getBalances(cardanoWalletAddress);
-    getTransactions(cardanoWalletAddress);
   };
 
   const getBalances = (cardanoWalletAddress: string) => {
@@ -78,21 +81,13 @@ const LoginGoogle = () => {
       });
   };
 
-  const getTransactions = (cardanoWalletAddress: string) => {
-    fetch(`${process.env.REACT_APP_CARDANO_WALLET_URL}/api/v0/address/getTransactions/${cardanoWalletAddress}`)
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data.transactions);
-        setTransactions(data.transactions);
-      });
-  };
-
-  const onLoginFailure = (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
+  const onLoginFailure = (_response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
     setLoginObj({...loginObj,
         googleId: "",
         name: "",
         email: "",
         imageUrl: "",
+        cardano_wallet_id: "",
         cardano_acct_addr: "",
         campus_id: "",
         account_type: ""

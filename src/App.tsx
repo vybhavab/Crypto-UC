@@ -11,6 +11,7 @@ let login_obj: User = {
   email:"",
   imageUrl:"",
   cardano_acct_addr:"",
+  cardano_wallet_id: "",
   campus_id:"",
   account_type: "",
 }
@@ -19,7 +20,6 @@ const App = () => {
     const [isSignedIn, setSignIn] = useState(false);
     const [loginObj, setLoginObj] = useState(login_obj);
     const [balance, setBalance] = useState(0);
-    const [address, setAddress] = useState("");
     const [transactions, setTransactions] = useState<Transaction[]>([]);
 
     return (
@@ -28,9 +28,7 @@ const App = () => {
           value={
             {
               balance: balance,
-              address: address,
               transactions: transactions,
-              setAddress: setAddress,
               setBalance: setBalance,
               setTransactions: setTransactions
             }

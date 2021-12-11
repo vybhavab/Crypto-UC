@@ -1,9 +1,19 @@
-import { Box, Flex, Icon, Text, useColorModeValue } from "@chakra-ui/react";
 import React from "react";
+import { Box, Flex, Text, Icon, useColorModeValue } from "@chakra-ui/react";
+import { FaArrowDown, FaArrowUp } from "react-icons/fa";
 
-const TransactionRow = (props:any) => {
+interface Props {
+  name: string,
+  date: string,
+  isOutgoing: boolean,
+  isPending: boolean,
+  price: number,
+  unit: string
+}
+
+const TransactionRow = (props:Props) => {
   const textColor = useColorModeValue("gray.700", "white");
-  const { name, date, logo, price } = props;
+  const { name, date, isOutgoing, isPending, price, unit } = props;
 
   return (
     <Flex my="1rem" justifyContent="space-between">
@@ -12,11 +22,7 @@ const TransactionRow = (props:any) => {
           me="12px"
           borderRadius="50%"
           color={
-            price[0] === "+"
-              ? "green.400"
-              : price[0] === "-"
-              ? "red.400"
-              : "gray.400"
+            isPending ? "gray.400" : isOutgoing ? "red.400" : "green.400"
           }
           border="1px solid"
           display="flex"
@@ -25,7 +31,7 @@ const TransactionRow = (props:any) => {
           w="35px"
           h="35px"
         >
-          <Icon as={logo} />
+          <Icon as={isOutgoing ? FaArrowUp : FaArrowDown  }/>
         </Box>
         <Flex direction="column">
           <Text
@@ -33,7 +39,7 @@ const TransactionRow = (props:any) => {
             color={textColor}
             fontWeight="bold"
           >
-            {name}
+            {name.substring(0, 30) + '...'}
           </Text>
           <Text
             fontSize={{ sm: "xs", md: "sm", lg: "xs" }}
@@ -46,15 +52,11 @@ const TransactionRow = (props:any) => {
       </Flex>
       <Box
         color={
-          price[0] === "+"
-            ? "green.400"
-            : price[0] === "-"
-            ? "red.400"
-            : { textColor }
+          isPending ? { textColor } : isOutgoing ? "red.400" : "green.400"
         }
       >
         <Text fontSize={{ sm: "md", md: "lg", lg: "md" }} fontWeight="bold">
-          {price}
+          {price} {unit}
         </Text>
       </Box>
     </Flex>

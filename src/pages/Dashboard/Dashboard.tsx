@@ -16,28 +16,11 @@ import DashboardUsersCard from "components/Card/DashboardUsersCard";
 import DashboardTransactions from "components/Card/DashboardTransactions";
 import { FaUsers } from "react-icons/fa";
 import { GiClick, GiMoneyStack } from "react-icons/gi";
-import { getUserData } from "utils/firebase";
 import { LoginContext } from "contexts/LoginContext";
-import { CardanoContext } from "contexts/CardanoContext";
 
 const Dashboard = () => {
 
   const { loginObj } = useContext(LoginContext);
-  const { transactions } = useContext(CardanoContext);
-
-  useEffect(() => {
-    if(loginObj.googleId !== undefined){
-      getUserData(loginObj.googleId).then((user) => {
-        if(user !== undefined){
-          //const transactions = fetch(`${process.env.REACT_APP_CARDANO_WALLET_URL}/api/v0/address/getBalance/${res.cardano_acct_addr}`).then((res) => {console.log(res)});
-          if(user.cardano_acct_addr !== undefined){
-          }
-        }
-      }).catch((err) => {
-        console.error(err);
-      });
-    }
-  });
 
   return (
       <Flex flexDirection="column" pt={{ base: "60px", md: "75px" }}>
@@ -82,9 +65,6 @@ const Dashboard = () => {
                 <DashboardUsersCard title={"Sales"} amount={"$24,00"} icon={GiMoneyStack}/>
                 <DashboardUsersCard title={"Items"} amount={"320"}  icon={BiCube}/>
               </SimpleGrid>
-
-
-
             </CardBody>
           </Card>
           <Card maxHeight="290.5px" pl="1.2rem">

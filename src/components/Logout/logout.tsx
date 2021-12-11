@@ -15,6 +15,7 @@ const Logout = () => {
       account_type: "",
       campus_id: "",
       cardano_acct_addr: "",
+      cardano_wallet_id: "",
       name: "",
       email: "",
       imageUrl: ""

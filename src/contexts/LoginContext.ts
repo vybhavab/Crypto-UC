@@ -9,6 +9,7 @@ const LoginContext = createContext({
         name:"",
         email:"",
         imageUrl:"",
+        cardano_wallet_id: "",
         cardano_acct_addr:"",
         campus_id:"",
         account_type: ""
