@@ -95,7 +95,7 @@ const Hero = (props:any) => {
                 _hover={{
                   bg: '#FFCC33',
                 }}
-                onClick={()=> window.location.href='https://youtu.be/ZEcqHA7dbwM'}>
+                onClick={()=> window.location.href='https://youtu.be/TlkUZ_asRDk'}>
                 <Text>Watch Demo Video </Text>
               </Button>
             </VStack>
