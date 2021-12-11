@@ -12,7 +12,7 @@ const Portfolio = () =>{
                 <HStack>
                     <PortfolioCard title={"Net Deposit"} icon={ImDatabase} arrow={"increase"} amount={"23,021"} percent={"9.05%"}/>
                     <PortfolioCard title={"Net Withdrawal"} icon={BiDollar} arrow={"decrease"} amount={"5,000"} percent={"4.05%"}/>
-                    
+
                 </HStack>
                 {/* <Box height='10px'></Box> */}
                 <Box width={['100%' , '100%', '100%']}>

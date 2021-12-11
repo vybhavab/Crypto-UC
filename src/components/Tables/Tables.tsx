@@ -13,12 +13,16 @@ import {
 // Custom components
 
 import TablesTableRow from "components/Tables/TablesTableRow";
-import {  tablesTableData } from "variables/general";
 import Card from "components/Card/Card";
 import CardHeader from "components/Card/CardHeader";
 import CardBody from "components/Card/CardBody";
+import { Transaction } from "types/cardano.types";
 
-const Tables=()=> {
+interface Props {
+  transactions: Transaction[]
+}
+
+const Tables = ({ transactions }: Props) => {
   const textColor = useColorModeValue("gray.700", "white");
 
   return (
@@ -29,44 +33,40 @@ const Tables=()=> {
             Transaction History
           </Text>
         </CardHeader>
-      
-        <CardBody > 
+
+        <CardBody >
           <Table variant="simple" color={textColor}>
             <Thead>
               <Tr my=".8rem" pl="0px" color="gray.400">
                 <Th pl="0px" color="gray.400">
-                  Name
+                  Transaction ID
                 </Th>
-                <Th color="gray.400">Account Type</Th>
                 <Th color="gray.400">Amount</Th>
                 <Th color="gray.400">Date</Th>
-                <Th color="gray.400" w="10%">Address</Th>
-                <Th></Th>
               </Tr>
             </Thead>
             <Tbody>
-              {tablesTableData.map((row) => {
+              {transactions.length > 0 ? transactions.map((transaction) => {
                 return (
                   <TablesTableRow
-                    name={row.name}
-                    logo={row.logo}
-                    email={row.email}
-                    subdomain={row.subdomain}
-                    domain={row.domain}
-                    status={row.status}
-                    date={row.date}
-                    address={row.address}
+                    id={transaction.id}
+                    isOutgoing = {transaction.direction === "outgoing"}
+                    isPending = {transaction.metadata === "pending"}
+                    date={new Date(transaction.inserted_at.time).toDateString() || ""}
+                    unit={transaction.amount.unit}
+                    amount={transaction.amount.quantity}
+                    key={transaction.id}
                   />
                 );
-              })}
+              }) : "No Transactions available"}
             </Tbody>
           </Table>
-          
+
         </CardBody>
         {/* </VStack> */}
       {/* </Center> */}
     </Card>
-    {/* <Card p={10} borderWidth='1px' borderRadius='lg'  
+    {/* <Card p={10} borderWidth='1px' borderRadius='lg'
       overflowX={{ sm: "scroll", xl: "hidden" }}
     >
       <CardHeader p="6px 0px 22px 0px">

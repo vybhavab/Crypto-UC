@@ -3,7 +3,7 @@ import { BarChart, XAxis, YAxis, Bar, ResponsiveContainer} from 'recharts';
 
 const ChartTest= (props:any) =>{
   const data = [
-    { 
+    {
       time: "Sep",
       users: 58,
     },

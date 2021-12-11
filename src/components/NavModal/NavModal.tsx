@@ -24,9 +24,21 @@ import { FiChevronDown } from "react-icons/fi";
 import Logout from "components/Logout/logout";
 import LoginGoogle from "components/LoginGoogle/LoginGoogle";
 import { ColorModeSwitcher } from "../../utils/ColorModeSwitcher";
+import { CardanoContext } from "contexts/CardanoContext";
 
 const NavModal = () => {
   const { loggedIn, loginObj } = useContext(LoginContext);
+  const { balance, transactions } = useContext(CardanoContext);
+
+  const getTotalSpent = ():number => {
+    let spent = 0;
+    transactions!.forEach((elem) => {
+      if(elem.direction === "outgoing") {
+        spent += elem.amount.quantity;
+      }
+    })
+    return spent;
+  };
 
   return (
     <div>
@@ -99,13 +111,13 @@ const NavModal = () => {
 
                     <Stack direction={'row'} justify={'center'} spacing={6}>
                       <Stack spacing={0} align={'center'}>
-                        <Text fontWeight={600}>40.762</Text>
+                        <Text fontWeight={600}>{balance/1000000}</Text>
                         <Text fontSize={'sm'} color={'gray.500'}>
                           Balance
                         </Text>
                       </Stack>
                       <Stack spacing={0} align={'center'}>
-                        <Text fontWeight={600}>13.441</Text>
+                        <Text fontWeight={600}>{getTotalSpent()/1000000}</Text>
                         <Text fontSize={'sm'} color={'gray.500'}>
                           Total Spent
                         </Text>
@@ -133,8 +145,6 @@ const NavModal = () => {
                     <MenuItem>Help</MenuItem>
                     <MenuDivider />
                     <MenuItem color='red'><Logout></Logout></MenuItem>
-
-
                   </Box>
                 </Box>
               </Center>
@@ -142,8 +152,6 @@ const NavModal = () => {
           </Menu>
         </Flex>
       </HStack>
-
-
     </div>
   )
 }

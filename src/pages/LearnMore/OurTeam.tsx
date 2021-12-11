@@ -5,7 +5,7 @@ import {
     HStack,
     Grid,
     VStack,
-  } from "@chakra-ui/react";
+} from "@chakra-ui/react";
 import TeamMemberCard from "components/Card/TeamMemberCard";
 import david_haddad from "assets/img/avatars/david_haddad.jpg";
 import seongwoo from "assets/img/avatars/seongwoo2.jpg";
@@ -18,9 +18,9 @@ import lebanon from "assets/img/lebanon.jpg";
 
 const OurTeam = () => {
     return (
-        
-       
-        <Box textAlign="center" fontSize="xl">            
+
+
+        <Box textAlign="center" fontSize="xl">
             <Grid minH="90vh" p={3}>
                 <VStack>
                     <Heading size='xl' pt='8' pb='8'>Our Team</Heading>
@@ -31,7 +31,7 @@ const OurTeam = () => {
                         <TeamMemberCard image={sai} name={"Sairamvinay V."} role={"Backend Developer"} email={"saivijay@ucdavis.edu"} imageSrc={jeju2} linkedIn={"https://www.linkedin.com/in/sairamvinay"} github={"https://github.com/Sairamvinay/"}></TeamMemberCard>
                     </HStack>
                     <Heading>
-                        <Heading size='md' pt='8' pb='8' color='gray.500'>Made with <span role="image">❤️</span>  by Vybhav, Seongwoo, David, and Sai</Heading>
+                        <Heading size='md' pt='8' pb='8' color='gray.500'>Made with <span role="img">🫀</span>  by Vybhav, Seongwoo, David, and Sai</Heading>
                     </Heading>
                 </VStack>
             </Grid>

@@ -1,4 +1,4 @@
-import { Box, Center} from '@chakra-ui/react';
+import { Box, Button, Center} from '@chakra-ui/react';
 import React, {useContext}from 'react';
 import { useGoogleLogout } from 'react-google-login';
 import { LoginContext } from 'contexts/LoginContext';
@@ -6,9 +6,20 @@ import { LoginContext } from 'contexts/LoginContext';
 const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 
 const Logout = () => {
-  const { setLoggedIn } = useContext(LoginContext);
+  const { setLoggedIn , loginObj, setLoginObj} = useContext(LoginContext);
   const onSuccess = () => {
     setLoggedIn(false);
+    setLoginObj({
+      ...loginObj,
+      googleId: "",
+      account_type: "",
+      campus_id: "",
+      cardano_acct_addr: "",
+      cardano_wallet_id: "",
+      name: "",
+      email: "",
+      imageUrl: ""
+    });
     console.log('logged out');
   }
 
@@ -24,7 +35,7 @@ const Logout = () => {
 
   return (
     <Center>
-        <Box onClick={signOut} pr={180} color="red">Sign Out</Box>
+        <Button as={Box} onClick={signOut} pr={180} color="red">Sign Out</Button>
     </Center>
   );
 }
