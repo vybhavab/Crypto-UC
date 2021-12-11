@@ -20,7 +20,7 @@ import { GiClick, GiMoneyStack } from "react-icons/gi";
 const Dashboard = () => {
     return (
            
-        <Flex flexDirection="column" pt={{ base: "60px", md: "75px" }}>
+        <Flex flexDirection="column" pt={{ base: "60px", md: "75px" }} >
             <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing="20px" >
                 <DashboardCardSmall title={"Today's Money"} amount={"$53,000"} percentage={"+55%"} icon={BiWallet} colorVal={"green.400"}/>
                 <DashboardCardSmall title={"Today's Users"} amount={'2,300'} percentage={"+5%"} icon={BsGlobe} colorVal={"green.400"}/>

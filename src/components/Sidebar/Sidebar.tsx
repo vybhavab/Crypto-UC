@@ -64,7 +64,7 @@ const Sidebar = ({
     }
   })
   return (
-    <Box minH="100vh" bg={useColorModeValue('gray.100', 'gray.900')}>
+    <Box minH="100vh" bg={useColorModeValue('white', 'gray.900')}>
       <SidebarContent
         onClose={() => onClose}
         display={{ base: 'none', md: 'block' }}
@@ -97,16 +97,12 @@ interface SidebarProps extends BoxProps {
 const SidebarContent = ({ onClose, ...rest }: SidebarProps) => {
   return (
     <Box
-      bg={useColorModeValue('white', 'gray.800')}
-      borderRight="1px"
-      borderRightColor={useColorModeValue('gray.200', 'gray.700')}
+      bg={useColorModeValue('white', 'gray.900')}
       w={{ base: 'full', md: 60 }}
       pos="fixed"
-      h="full"
       // borderWidth="20px"
-      borderColor={useColorModeValue('gray.100', 'gray.900')}
+      // borderColor={useColorModeValue('white', 'gray.900')}
       overflow="hidden"
-      borderRadius="lg"
       {...rest}>
       <Flex h="10" alignItems="center" mx="8" justifyContent="space-between">
         <CloseButton display={{ base: 'flex', md: 'none' }} onClick={onClose} />
