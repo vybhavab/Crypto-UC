@@ -5,6 +5,13 @@ export interface CardanoObj{
   setTransactions: (transactions: Transaction[]) => void,
 }
 
+export interface SendableAccounts {
+  name: string;
+  email: string;
+  cardanoAcctAddress: string;
+  imageUrl: string;
+}
+
 export interface Transaction {
   id: string,
   amount: Amount,

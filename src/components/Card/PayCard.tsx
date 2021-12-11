@@ -4,7 +4,7 @@ import {  Button,  HStack, Icon } from "@chakra-ui/react";
 
 const PayCard = (props:any) =>{
     return (
-        <Box borderRadius="15" width ="120px" height='70px' as={Button} bg={props.color}>
+        <Box borderRadius="15" width ="120px" height='70px' as={Button} bg={props.color} onClick={props.onClick}>
             <HStack>
                 <Icon as={props.icon} />
                 <Text>{props.title} </Text>

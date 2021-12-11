@@ -1,37 +1,18 @@
-import React, { useContext, useEffect } from 'react';
+import React from 'react';
 
-import { Flex, Icon, Text, useColorModeValue } from '@chakra-ui/react';
+import { Flex, Text, useColorModeValue } from '@chakra-ui/react';
 import Card from './Card';
 import CardHeader from './CardHeader';
 import CardBody from './CardBody';
 import TransactionRow from 'components/Tables/TransactionRow';
-import { CardanoContext } from 'contexts/CardanoContext';
-import { LoginContext } from 'contexts/LoginContext';
+import { Transaction } from 'types/cardano.types';
 
-const DashboardTransactions = () =>{
 
-  const { loginObj } = useContext(LoginContext);
-  const { transactions, setTransactions } = useContext(CardanoContext)
+interface Props {
+  transactions: Transaction[]
+}
 
-  useEffect(() => {
-    getTransactions(loginObj.cardano_wallet_id);
-  }, [loginObj])
-
-  const getTransactions = (cardanoWalletAddress: string) => {
-    if(cardanoWalletAddress.length > 0){
-      fetch(`${process.env.REACT_APP_CARDANO_WALLET_URL}/api/v0/address/getTransactions/${cardanoWalletAddress}`)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log("here");
-          console.log(data.transactions);
-          if(data.transactions.length < 1){
-            return "No Transactions";
-          }
-          setTransactions(data.transactions);
-        });
-      }
-  };
-
+const DashboardTransactions = ({transactions}: Props) =>{
 
   return(
     <Card  my="24px" ms={{ lg: "24px" }}>
@@ -65,7 +46,8 @@ const DashboardTransactions = () =>{
                 date={new Date(transaction.inserted_at.time).toDateString()}
                 price={transaction.amount.quantity}
                 unit={transaction.amount.unit}
-                />
+                key={transaction.id}
+              />
             );
           })}
         </Flex>

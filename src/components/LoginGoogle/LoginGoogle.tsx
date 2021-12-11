@@ -12,7 +12,7 @@ const clientId = process.env.REACT_APP_GOOGLE_CLIENT_ID as string;
 
 const LoginGoogle = () => {
   const { loggedIn, setLoggedIn, setLoginObj,loginObj } = useContext(LoginContext);
-  const { setBalance, setTransactions } = useContext(CardanoContext);
+  const { setBalance } = useContext(CardanoContext);
 
   const onLoginSuccess = async (response: GoogleLoginResponse | GoogleLoginResponseOffline) => {
 

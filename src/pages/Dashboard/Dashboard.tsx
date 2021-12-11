@@ -17,10 +17,22 @@ import DashboardTransactions from "components/Card/DashboardTransactions";
 import { FaUsers } from "react-icons/fa";
 import { GiClick, GiMoneyStack } from "react-icons/gi";
 import { LoginContext } from "contexts/LoginContext";
+import { CardanoContext } from "contexts/CardanoContext";
+import { getTransactions } from "utils/cardano";
 
 const Dashboard = () => {
 
   const { loginObj } = useContext(LoginContext);
+  const { transactions, setTransactions } = useContext(CardanoContext)
+
+
+  useEffect(() => {
+    const getTx = async () => {
+      const transactions = await getTransactions(loginObj.cardano_wallet_id);
+      setTransactions(transactions);
+    }
+    getTx()
+  }, [loginObj, setTransactions])
 
   return (
       <Flex flexDirection="column" pt={{ base: "60px", md: "75px" }}>
@@ -69,7 +81,7 @@ const Dashboard = () => {
           </Card>
           <Card maxHeight="290.5px" pl="1.2rem">
             <CardBody  borderWidth="1px" borderRadius="15px" bg={useColorModeValue('white','gray.700')} width="100%">
-              <DashboardTransactions/>
+              <DashboardTransactions transactions={transactions || []}/>
             </CardBody>
           </Card>
         </SimpleGrid>
