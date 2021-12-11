@@ -69,12 +69,13 @@ const Hero = (props:any) => {
                 fontWeight="normal"
                 color={'gray.500'}
                 lineHeight={1.5}
+                mb={4}
                 textAlign={["center", "center", "left", "left"]}
             >
                The Next Generation of Payments for the UC System
             </Heading>
     
-            <Link to="/learnmore">
+            <Link to="/design">
               <Button
                 colorScheme={'green'}
                 bg={'#00B2E3'}
@@ -83,7 +84,7 @@ const Hero = (props:any) => {
                 _hover={{
                   bg: '#FFCC33',
                 }}>
-                <Text>Learn more </Text>
+                <Text>Final Report</Text>
               </Button>
             </Link>
               <Button
@@ -169,7 +170,7 @@ const Hero = (props:any) => {
         textAlign={["center", "center","center","left", "center"]}
         lineHeight={'110%'}
         mb={{ base:16, md: 8, sm:2}}>
-            UCrypto operates on a fast and scalable blockchain technology.
+            UCrypton operates on a fast and scalable blockchain technology.
       </Heading>
       </Box>
       <Spacer/>

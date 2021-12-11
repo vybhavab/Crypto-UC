@@ -2,7 +2,6 @@
 import React from "react";
 import Home from "pages/Home/Home";
 import Sidebar from "components/Sidebar/Sidebar";
-import LearnMore from "pages/LearnMore/LearnMore";
 import PageNotFound from "pages/PageNotFound/PageNotFound";
 import Dashboard from "pages/Dashboard/Dashboard";
 import Navbar from "components/Navbar/Navbar";
@@ -26,7 +25,6 @@ const AppRoutes = (props:any) => {
     <Navbar />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route path="/learnmore" component={LearnMore}/>
         <Route path="/ourteam" component={OurTeam}/>
         <Route path="/updates" component={NewNoteWorthy}/>
         <Route path="/roadmap" component={RoadMap}/>
